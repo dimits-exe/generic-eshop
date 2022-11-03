@@ -1,0 +1,87 @@
+header,
+footer {
+    background-color: #33838c;
+    color: white;
+}
+
+header, h1 {
+    font-family: 'Times New Roman', Georgia, Times, serif;
+}
+
+/* Set slightly larger default sex size for the document's text*/
+body {
+    font-size: 1.15em;
+}
+
+h1 {
+    font-size: 5em;
+}
+
+h2 {
+    font-size: 2.2em;
+}
+
+h3 {
+    font-size: 1.4em;
+    text-decoration: underline;
+}
+
+dfn {
+    color: darkcyan;
+    text-decoration: underline;
+}
+
+/*
+ * A category is any item on a list of categories such as the product
+ * categories and the products themselves.
+ */
+.category {
+    background-color: lightskyblue;
+    border-style: outset;
+    border-width: 0.4em;
+    padding-left: 2%;
+    padding-right: 2%
+}
+
+/*
+ * The image accompanying each category.
+ * We don't want to explicitly set width and height because
+ * we don't want to ruin its aspect ratio.
+ */
+.category img {
+    max-width: 25em;
+    max-height: 30em;
+}
+
+/* 
+ * The description of the category. 
+ * Slightly upscaled and with a different font to differentiate it 
+ * from other, general text in the document.
+ */
+.category p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.1em
+}
+
+/* The h3 tag in a category denotes the title of that category. */
+.category h3 {
+    font-size: 1.6em;
+}
+
+/* 
+ * The h5 tag in a category denotes specific product information
+ * such as code, price etc.
+ * We want it to be of a large size and default style.
+ */
+.category h5 {
+    font-size: 1.5em;
+}
+
+/* 
+ * The var tag in a denotes a value for a key-value pair
+ * used in a h5 tag.
+ * A unique color is given to differentiate it from the h5 tag.
+ */
+.category var {
+    color: green;
+}
