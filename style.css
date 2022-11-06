@@ -44,6 +44,8 @@ h3 {
     text-decoration: underline;
 }
 
+/* ======= FOOTER ======= */
+
 /* Set footer image size and place it in the centre */
 #footer-img img {
     display: block;
@@ -76,6 +78,11 @@ h3 {
     justify-content: space-around;
 }
 
+/* Set size for address icons */
+#footer-address img {
+    height: 2em;
+}
+
 /*  
  * Define a textbox, an area where a specific piece of text is placed, 
  * usually alongside a title and an image.
@@ -89,6 +96,15 @@ h3 {
     padding: 1.5em;
     border-radius: 1em;
     box-shadow: 0em 0em 0.2em 0.4em rgba(0, 37, 138, 0.05);
+}
+
+/*
+ * The standard images acompanying text and category boxes.
+ * We don't want to explicitly set both width and height because
+ * we don't want to ruin its aspect ratio.
+ */
+.textbox img, .category img{
+    width: 18em;
 }
 
 /*
@@ -137,16 +153,6 @@ tr:nth-child(even) {
     padding-right: 2%;
     margin: 1em;
     box-shadow: 0em 0em 0.2em 0.2em rgba(0, 37, 138, 0.05);
-}
-
-/*
- * The image accompanying each category.
- * We don't want to explicitly set width and height because
- * we don't want to ruin its aspect ratio.
- */
-.category img {
-    max-width: 25em;
-    max-height: 30em;
 }
 
 /* 
