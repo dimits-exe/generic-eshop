@@ -8,89 +8,65 @@
     <meta content="Marine Applications" name="description" />
     <meta content="Ioannis Gkionis, Dimitris Tsirmpas" name="author" />
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-    <link rel="stylesheet" href="style.css">
+    <link href="style.css" rel="stylesheet" />
 </head>
 
 <body>
     <header>
+        <a class="logo-img" href="index.html">
+            <img alt="Faymetrics logo" src="resources/logo_small.png" />
+        </a>
         <h1>
             Faymetrics
         </h1>
         <h2>
-            Is Hell Exhaustive?
+            I won't be a fay-lure anymore
         </h2>
-        <a href="index.html">
-            <img alt="Faymetrics logo" src="resources/logo.png" />
-        </a>
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html" tabindex="1">
-                        <h3>
-                            Home
-                        </h3>
+        <nav class="navbar">
+            <a href="index.html" tabindex="1">
+                Home
+            </a>
+            <a href="categories.html" tabindex="2">
+                Product categories
+            </a>
+            <section class="dropdown">
+                <button class="dropbtn">
+                    Ecology
+                </button>
+                <section class="dropdown-content">
+                    <a href="marine-applications.html" tabindex="3">
+                        Marine Applications
                     </a>
-                </li>
-                <li>
-                    <a href="categories.html" tabindex="2">
-                        <h3>
-                            Product categories
-                        </h3>
+                    <a>
+                        Industrial and Agricultural Applications
                     </a>
-                    <ul>
-                        <li>
-                            <h3>
-                                Ecology
-                            </h3>
-                            <ul>
-                                <li>
-                                    <a href="marine-applications.html" tabindex="3">
-                                        Marine Applications
-                                    </a>
-                                </li>
-                                <li>
-                                    Industrial and Agricultural Applications
-                                </li>
-                                <li>
-                                    Climate Services
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <h3>
-                                Meteorology
-                            </h3>
-                            <ul>
-                                <li>
-                                    <a href="early-warning-systems.html" tabindex="4">
-                                        Early Warning Systems
-                                    </a>
-                                </li>
-                                <li>
-                                    Weather Forecasting Devices
-                                </li>
-                                <li>
-                                    Aviation Appliances
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="about-us.html" tabindex="5">
-                        <h3>
-                            About us
-                        </h3>
+                    <a>
+                        Climate Services
                     </a>
-                </li>
-                <li>
-                    <a href="contact.html" tabindex="6">
-                        <h3>
-                            Contact us
-                        </h3>
+                </section>
+            </section>
+            <section class="dropdown">
+                <button class="dropbtn">
+                    Meteorology
+                </button>
+                <section class="dropdown-content">
+                    <a href="early-warning-systems.html" tabindex="4">
+                        Early Warning Systems
                     </a>
-                </li>
-            </ul>
+                    <a>
+                        Weather Forecasting Devices
+                    </a>
+                    <a>
+                        Aviation Appliances
+                    </a>
+                </section>
+            </section>
+            <a href="about-us.html" tabindex="5">
+                About us
+            </a>
+            <a href="contact.html" tabindex="6">
+                Contact us
+            </a>
         </nav>
     </header>
     <main>
@@ -110,8 +86,11 @@
             </p>
             <p>
                 The most common ones encountered are carbon dioxide (CO2), sulphur dioxide (SO₂) and particulate matter
-                Faymetrics solutions integrate LIDAR, <dfn
-                    title="Multi-Axis Differential Optical Absorption Spectroscopy">MAX-DOAS</dfn> and cloud radar
+                Faymetrics solutions integrate LIDAR,
+                <dfn title="Multi-Axis Differential Optical Absorption Spectroscopy">
+                    MAX-DOAS
+                </dfn>
+                and cloud radar
                 generated measurements data to provide
                 accurate maritime emissions detection
             </p>
@@ -120,19 +99,22 @@
             <h2>
                 Discover our latest Products
             </h2>
-
             <article class="category">
                 <h3>
                     <a href="products-fluorescence-lidar.html">
                         Fluorescence LIDAR System
                     </a>
                 </h3>
-                <img src="resources/fluorescence_lidar.jfif" alt="LIDAR system" width="300">
-
-
-                <h5>Product Code: #EFFVG34</h5>
-                <h5>Price: <var>15.000$</var></h5>
-
+                <img alt="LIDAR system" src="resources/fluorescence_lidar.jfif" width="300">
+                <h5>
+                    Product Code: #EFFVG34
+                </h5>
+                <h5>
+                    Price:
+                    <var>
+                        15.000$
+                    </var>
+                </h5>
                 <p>
                     Fluorescence lidar is a non-invasive, remote sensing technique that makes it possible to extend the
                     application of the laser-induced fluorescence technique to the outdoor environment. Various sea and
@@ -141,74 +123,105 @@
                     show this tendency, fluorescence is a strong indication of the presence of oil or a bio-particle in
                     the water or air respectively.
                 </p>
-
-                <h5>Rating: <var>8.2</var>/10</h5>
+                <h5>
+                    Rating:
+                    <var>
+                        8.2
+                    </var>
+                    /10
+                </h5>
+                </img>
             </article>
-
             <article class="category">
                 <h3>
                     <a href="products-vessel-monitoring.html">
                         Vessel Monitoring System - VMS
                     </a>
                 </h3>
-                <img src="resources/vessel_monitoring.png" alt="vessel monitoring system" width="500">
-
-
-                <h5>Product Code: #ABDFG</h5>
-                <h5>Price: <var>305.000$</var></h5>
-
+                <img alt="vessel monitoring system" src="resources/vessel_monitoring.png" width="500" />
+                <h5>
+                    Product Code: #ABDFG
+                </h5>
+                <h5>
+                    Price:
+                    <var>
+                        305.000$
+                    </var>
+                </h5>
                 <p>
                     With this software, a boat equipped with a Velodyne Lidar (360° laser scan) and a GPS is
                     able to map its environment and to generate both 2D and 3D occupancy grid. Our software can
                     be used on a USV (Unmaned Surface Vehicle) for autonomous navigation, obstacle avoidance or
                     mobile objects detection
                 </p>
-
-                <h5>Rating: <var>8.9</var>/10</h5>
+                <h5>
+                    Rating:
+                    <var>
+                        8.9
+                    </var>
+                    /10
+                </h5>
             </article>
-
             <article class="category">
                 <h3>
                     <a href="products-lidar-marine.html">
                         LIDAR Marine Object Detection and Tracking (MDT)
                     </a>
                 </h3>
-                <img src="resources/ship.jfif" alt="LIDAR object detection" width="500">
-
-                <h5>Product Code: #YPOFE45</h5>
-                <h5>Price: <var>60.000$</h5>
-
+                <img alt="LIDAR object detection" src="resources/ship.jfif" width="500" />
+                <h5>
+                    Product Code: #YPOFE45
+                </h5>
+                <h5>
+                    Price:
+                    <var>
+                        60.000$
+                    </var>
+                </h5>
                 <p>
                     With this software, a boat equipped with a Velodyne Lidar (360° laser scan) and a GPS is
                     able to map its environment and to generate both 2D and 3D occupancy grid. Our software can
                     be used on a USV (Unmaned Surface Vehicle) for autonomous navigation, obstacle avoidance or
                     mobile objects detection
                 </p>
-
-                <h5>Rating: <var>7.5</var>/10</h5>
+                <h5>
+                    Rating:
+                    <var>
+                        7.5
+                    </var>
+                    /10
+                </h5>
             </article>
-
             <article class="category">
                 <h3>
                     <a href="products-max-doas.html">
                         MAX-DOAS Instrument for Measuring Atmospheric Pollution
                     </a>
                 </h3>
-                <img src="resources/MAX-DOAS.jpg" alt="The IMPACT imaging MAX-DOAS instrument" width="500">
-
-                <h5>Product Code: #JHGFE45</h5>
-                <h5>Price: <var>12.000$</var></h5>
-
+                <img alt="The IMPACT imaging MAX-DOAS instrument" src="resources/MAX-DOAS.jpg" width="500" />
+                <h5>
+                    Product Code: #JHGFE45
+                </h5>
+                <h5>
+                    Price:
+                    <var>
+                        12.000$
+                    </var>
+                </h5>
                 <p>
                     MAX-DOAS instruments are basically UV/visible spectrometers observing scattered sunlight in
                     different viewing directions towards the sky. In the novel Imaging Mapper for Atmospheric
                     Observations (IMPACT) developed at IUP-Bremen, a grating spectrometer equipped with a cooled
                     2-D CCD detector is used to measure visible light (425–490 nm).
                 </p>
-
-                <h5>Rating: <var>9.7</var>/10</h5>
+                <h5>
+                    Rating:
+                    <var>
+                        9.7
+                    </var>
+                    /10
+                </h5>
             </article>
-
         </article>
     </main>
     <footer>
