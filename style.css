@@ -4,7 +4,8 @@ footer {
     color: white;
 }
 
-header, h1 {
+header,
+h1 {
     font-family: 'Times New Roman', Georgia, Times, serif;
 }
 
@@ -26,9 +27,28 @@ h3 {
     text-decoration: underline;
 }
 
+/* Mark defintions with bold and italics*/
 dfn {
+    font-weight: bold;
+}
+
+/* Change color while waiting for the text box to pop up*/
+dfn:hover {
     color: darkcyan;
     text-decoration: underline;
+}
+
+/* Basic border configuration for the technical details table*/
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 0.1em solid black;
+}
+
+/* Make the tables striped */
+tr:nth-child(even) {
+    background-color: lightgray;
 }
 
 /*
