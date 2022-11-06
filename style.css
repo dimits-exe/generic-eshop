@@ -1,20 +1,23 @@
+/* Define common color schemes for header and footer */
 header,
 footer {
     background-color: #006fbb;
     color: white;
 }
 
-header,
-h1 {
+/* Set font for header */
+header {
     font-family: Helvetica, sans-serif;
 }
 
+/* Place image on the left of the header */
 #logo-img {
     float: left;
     padding-right: 1em;
     display: absolute;
 }
 
+/* Define image size */
 #logo-img img {
     width: 10.99em;
 }
@@ -25,20 +28,23 @@ body {
     background-color: #e3e3e3;
 }
 
+/* Set title size as large*/
 h1 {
     font-size: 4em;
 }
 
+/* Set sub-title as 1/2 of the title's size */
 h2 {
     font-size: 2em;
 }
 
-
+/* This tag is used to enumerate through cartegories, so we underline it */
 h3 {
     font-size: 1.4em;
     text-decoration: underline;
 }
 
+/* Set footer image size and place it in the centre */
 #footer-img img {
     display: block;
     width: 40%;
@@ -46,21 +52,36 @@ h3 {
     margin-right: auto;
 }
 
+/* Create vertical space between contact details and image */
 #footer-details {
     margin-top: 2em;
 }
 
+/* 
+ * Horizontally center all the footer details, 
+ * where each div is an individual detail.
+ */
 #footer-details div {
     display: block;
     text-align: center;
 }
 
+/*  
+ * Create vertical space between address and contact details,
+ * spread contact details along the footer 
+ */
 #footer-address {
     margin-top: 2em;
     display: flex;
     justify-content: space-around;
 }
 
+/*  
+ * Define a textbox, an area where a specific piece of text is placed, 
+ * usually alongside a title and an image.
+ * Place the textbox in a differently colored container, with appropriate
+ * space around it and some shadow.
+ */
 .textbox {
     font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: white;
@@ -70,6 +91,10 @@ h3 {
     box-shadow: 0em 0em 0.2em 0.4em rgba(0, 37, 138, 0.05);
 }
 
+/*
+ * Define a text-intro, a paragraph that starts a distinct semantic area.
+ * We want the first letter of every text intro to be visually distinct.
+ */
 .text-intro::first-letter {
     font-size: 1.4em;
     font-weight: bold;
