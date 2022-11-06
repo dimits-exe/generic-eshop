@@ -12,6 +12,7 @@ h1 {
 .logo-img {
     float: left;
     padding-right: 1em;
+    display: absolute;
 }
 
 /* Set slightly larger default sex size for the document's text*/
@@ -33,18 +34,33 @@ h3 {
     text-decoration: underline;
 }
 
-/* Mark defintions with bold and italics*/
+.textbox {
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: white;
+    margin: 2em;
+    padding: 1em 1.5em 1.5em 1.5em;
+    border-radius: 1em 3em;
+    box-shadow: 0em 0em 0.2em 0.4em rgba(0, 37, 138, 0.05);
+}
+
+.text-intro::first-letter {
+    font-size: 1.4em;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Mark defintions with bold and italics */
 dfn {
     font-weight: bold;
 }
 
-/* Change color while waiting for the text box to pop up*/
+/* Change color while waiting for the text box to pop up */
 dfn:hover {
     color: darkcyan;
     text-decoration: underline;
 }
 
-/* Basic border configuration for the technical details table*/
+/* Basic border configuration for the technical details table */
 table {
     table-layout: fixed;
     width: 100%;
@@ -57,17 +73,18 @@ tr:nth-child(even) {
     background-color: lightgray;
 }
 
-
 /*
  * A category is any item on a list of categories such as the product
  * categories and the products themselves.
  */
 .category {
-    background-color: lightskyblue;
+    background-color: white;
     border-style: outset;
     border-width: 0.4em;
     padding-left: 2%;
-    padding-right: 2%
+    padding-right: 2%;
+    margin: 1em;
+    box-shadow: 0em 0em 0.2em 0.2em rgba(0, 37, 138, 0.05);
 }
 
 /*
@@ -120,7 +137,8 @@ tr:nth-child(even) {
     font-family: Arial;
     display:flex;
     justify-content: space-around; 
-    align-items: center;
+    align-items: stretch;
+    /*transition: background-color 0.5s ease;*/
 }
 
 /* Links inside the navbar */
@@ -131,12 +149,15 @@ tr:nth-child(even) {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    flex-grow: 1;
 }
 
 /* The dropdown container */
 .dropdown {
     float: left;
+    align-items: stretch;
     overflow: hidden;
+    flex-grow: 1;
 }
 
 /* Dropdown button */
@@ -153,7 +174,7 @@ tr:nth-child(even) {
 
 /* Add a red background color to navbar links on hover */
 .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
+    background-color: #1042c9;
 }
 
 /* Dropdown content (hidden by default) */
