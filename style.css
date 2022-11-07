@@ -43,13 +43,14 @@ header h1 {
 
 /* Navbar container */
 #navbar {
-    overflow: hidden;
+    overflow: visible;
     background-color: #00258a;
     font-family: Arial;
-    display:flex;
-    justify-content: space-around; 
+    display: flex;
+    justify-content: space-around;
     align-items: stretch;
     clear: left;
+    position: sticky top;
     /*transition: background-color 0.5s ease;*/
 }
 
@@ -90,12 +91,15 @@ header h1 {
     color: white;
     padding: 14px 16px;
     background-color: inherit;
-    font-family: inherit; /* Important for vertical align on mobile phones */
-    margin: 0; /* Important for vertical align on mobile phones */
+    font-family: inherit;
+    /* Important for vertical align on mobile phones */
+    margin: 0;
+    /* Important for vertical align on mobile phones */
 }
 
 /* Add a red background color to navbar links on hover */
-#navbar a:hover, .dropdown:hover .dropbtn {
+#navbar a:hover,
+.dropdown:hover .dropbtn {
     background-color: #1042c9;
 }
 
@@ -106,7 +110,7 @@ header h1 {
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
@@ -213,6 +217,13 @@ tr:nth-child(even) {
     height: 2em;
 }
 
+/* Keep the icons used for the addresses small */
+.textbox address img,
+#footer address img {
+    width: 3em;
+    height: 3em;
+}
+
 /* ======= USER DEFINED BOXES ======= */
 
 /*  
@@ -235,7 +246,8 @@ tr:nth-child(even) {
  * We don't want to explicitly set both width and height because
  * we don't want to ruin its aspect ratio.
  */
-.textbox img, .category img{
+.textbox img,
+.category img {
     width: 18em;
 }
 
@@ -254,6 +266,7 @@ tr:nth-child(even) {
  * categories and the products themselves.
  */
 .category {
+    display: block;
     background-color: white;
     border-style: outset;
     border-width: 0.4em;
@@ -276,6 +289,10 @@ tr:nth-child(even) {
 /* The h3 tag in a category denotes the title of that category. */
 .category h3 {
     font-size: 1.6em;
+}
+
+.category img {
+    /*float: left;*/
 }
 
 /* 
