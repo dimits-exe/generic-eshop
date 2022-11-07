@@ -333,7 +333,14 @@ footer * {
 .category img {
     width: 18em;
     float: left;
-    padding-right: 1em;
+    padding-right: 3em;
+    transition: transform .2s;
+}
+
+/* Slightly zoom in on the pictures when hovered */ 
+.textbox img:hover,
+.category img:hover {
+    transform: scale(1.15);
 }
 
 /*
