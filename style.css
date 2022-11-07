@@ -83,6 +83,11 @@ header h1 {
     flex-grow: 1;
 }
 
+/* Add dropdown character indicator */
+.dropbtn::after {
+    content: "▼";
+}
+
 /* Dropdown button */
 .dropdown .dropbtn {
     font-size: 16px;
@@ -92,15 +97,14 @@ header h1 {
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;
-    /* Important for vertical align on mobile phones */
     margin: 0;
-    /* Important for vertical align on mobile phones */
 }
 
-/* Add a red background color to navbar links on hover */
+/* Add a different shade of blue to navbar links on hover */
 #navbar a:hover,
 .dropdown:hover .dropbtn {
     background-color: #1042c9;
+    color: black;
 }
 
 /* Dropdown content (hidden by default) */
