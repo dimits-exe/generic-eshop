@@ -50,8 +50,6 @@ header h1 {
     justify-content: space-around;
     align-items: stretch;
     clear: left;
-    position: sticky top;
-    /*transition: background-color 0.5s ease;*/
 }
 
 /* Links inside the dropdown */
@@ -109,7 +107,6 @@ header h1 {
 
 /* Dropdown content (hidden by default) */
 #navbar .dropdown-content {
-    border: top 0;
     display: none;
     position: absolute;
     background-color: #f9f9f9;
