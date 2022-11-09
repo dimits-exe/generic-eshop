@@ -202,6 +202,7 @@ fieldset * {
 
 /* Give vertical space between fieldsets */
 fieldset label {
+    text-align: left;
     margin-top: 1em;
 }
 
@@ -305,6 +306,17 @@ footer * {
 
 /* ======= USER DEFINED BOXES ======= */
 
+/* 
+ * Display a list of categories or products in 2 columns.
+ * We keep the classes for a list of categories and categories
+ * themselves separate because we may need to display a single category
+ * (for example in a product's page).
+ */
+.category-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 /*  
  * Define a textbox, an area where a specific piece of text is placed, 
  * usually alongside a title and an image.
@@ -313,12 +325,18 @@ footer * {
  */
 .textbox {
     font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
     background-color: white;
     margin: 2em;
     padding: 1.5em;
     border-radius: 1em;
     box-shadow: 0em 0em 0.2em 0.4em rgba(0, 37, 138, 0.05);
     overflow: auto;
+}
+
+/* Give a little vertical spacing between the textbox's text sections */
+.textbox h3 {
+    margin-top: 2em;
 }
 
 /*
@@ -328,16 +346,17 @@ footer * {
  */
 .textbox img,
 .category img {
-    width: 18em;
+    height: 15em;
     float: left;
     padding-right: 3em;
+    margin: 0.5em; /* Give space for when the picture zooms */
     transition: transform .2s;
 }
 
 /* Slightly zoom in on the pictures when hovered */ 
 .textbox img:hover,
 .category img:hover {
-    transform: scale(1.15);
+    transform: scale(1.1);
 }
 
 /*
