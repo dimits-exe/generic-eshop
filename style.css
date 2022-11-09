@@ -1,0 +1,420 @@
+/* ======= HEADER ======= */
+
+/* Define common color schemes for header and footer */
+header,
+footer {
+    background-color: #006fbb;
+    color: white;
+}
+
+/* Set font for header */
+header {
+    font-family: Helvetica, sans-serif;
+}
+
+/* Place image on the left of the header */
+#logo-img {
+    float: left;
+    padding-right: 1em;
+}
+
+/* Define image size */
+#logo-img img {
+    width: 10.45em;
+}
+
+#logo-img a {
+    padding-bottom: 0em;
+}
+
+/* Place sub-title directly below title on header */
+header h2 {
+    text-align: left;
+    margin-bottom: 0.5em;
+    margin-top: 0em;
+}
+
+/* Set distance between title and sub-title*/
+header h1 {
+    margin-bottom: 0.3em;
+}
+
+/* ======= NAVIGATION ======= */
+
+/* Navbar container */
+#navbar {
+    overflow: visible;
+    background-color: #00258a;
+    font-family: Arial;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    clear: left;
+}
+
+/* Links inside the dropdown */
+#navbar .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Links inside the navbar */
+#navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    flex-grow: 1;
+}
+
+/* The dropdown container */
+.dropdown {
+    float: left;
+    align-items: stretch;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+/* Add dropdown character indicator */
+.dropbtn::after {
+    content: "▼";
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+/* Add a different shade of blue to navbar links on hover */
+#navbar a:hover,
+.dropdown:hover .dropbtn {
+    background-color: #1042c9;
+    color: black;
+}
+
+/* Dropdown content (hidden by default) */
+#navbar .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Add a grey background color to dropdown links on hover */
+#navbar .dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+#navbar .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* ======= BODY GENERAL ======= */
+
+/* Set slightly larger default sex size for the document's text*/
+body {
+    font-size: 1.15em;
+    background-color: #e3e3e3;
+}
+
+/* Set title size as large and remove space above header */
+h1 {
+    font-size: 4em;
+    margin-top: 0;
+}
+
+/* 
+ * The subtitle is commonly used between text and category boxes
+ * so we will place them in the center
+ */
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+    text-decoration: wavy;
+}
+
+/* This tag is used to enumerate through cartegories, so we underline it */
+h3 {
+    font-size: 1.4em;
+    text-decoration: underline;
+}
+
+/* Mark defintions with bold and italics */
+dfn {
+    font-weight: bold;
+}
+
+/* Change color while waiting for the text box to pop up */
+dfn:hover {
+    color: darkcyan;
+    text-decoration: underline;
+}
+
+/* Basic border configuration for the technical details table */
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 0.1em solid black;
+}
+
+/* Make the tables striped */
+tr:nth-child(even) {
+    background-color: lightgray;
+}
+
+address {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* ======= FORMS ======= */
+
+/* Make the fieldset container visually distinct from other page elements */
+fieldset {
+    background-color: lightgray;
+    border-style: solid;
+    border-color: #00258a;
+    margin-bottom: 2em;
+}
+
+/* Place fieldset elements vertically */
+fieldset * {
+    display: block;
+}
+
+/* Give vertical space between fieldsets */
+fieldset label {
+    text-align: left;
+    margin-top: 1em;
+}
+
+/* Enlarge fieldset title */
+fieldset legend {
+    font-size: 150%;
+    font-weight: 400;
+}
+
+/* Make text area visually distinct */
+fieldset textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+
+/* Center buttions below the textarea */
+#button-group {
+    margin: 2em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Customize button appearance */
+#button-group button {
+    font-size: 200%;
+    border-radius: 1em;
+    border-color: #00258a;
+}
+
+/* Enlarge and change button color when hovered */
+#button-group button:hover {
+    background-color: grey;
+    font-size: 250%;
+}
+
+/* ======= FOOTER ======= */
+
+/* Space out footer elements*/
+footer * {
+    margin-bottom: 0.5em;
+}
+
+/* Set footer image size and place it in the centre */
+#footer-logo-img {
+    display: block;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Create vertical space between contact details and image */
+#footer-details {
+    margin-top: 2em;
+}
+
+/* 
+ * Horizontally center all the footer details, 
+ * where each div is an individual detail.
+ */
+#footer-details div {
+    text-align: center;
+}
+
+/* Set size for address icons */
+#footer-address img {
+    height: 2em;
+    display: flex;
+    align-items: center;
+}
+
+/* Keep the icons used for the addresses small */
+.textbox address img,
+#footer address img {
+    width: 3em;
+    height: 3em;
+}
+
+/* ======= USER DEFINED CLASSES ======= */
+
+/* Display social media icons spread out horizontally */
+.social-media-bar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Set max social media icons size */
+.social-media-bar img {
+    max-width: 2em;
+    max-height: 2em;
+    margin:0px;
+}
+
+/* ======= USER DEFINED BOXES ======= */
+
+/* 
+ * Display a list of categories or products in 2 columns.
+ * We keep the classes for a list of categories and categories
+ * themselves separate because we may need to display a single category
+ * (for example in a product's page).
+ */
+.category-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/*  
+ * Define a textbox, an area where a specific piece of text is placed, 
+ * usually alongside a title and an image.
+ * Place the textbox in a differently colored container, with appropriate
+ * space around it and some shadow.
+ */
+.textbox {
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    background-color: white;
+    margin: 2em;
+    padding: 1.5em;
+    border-radius: 1em;
+    box-shadow: 0em 0em 0.2em 0.4em rgba(0, 37, 138, 0.05);
+    overflow: auto;
+}
+
+/* Give a little vertical spacing between the textbox's text sections */
+.textbox h3 {
+    margin-top: 2em;
+}
+
+/*
+ * The standard images acompanying text and category boxes.
+ * We don't want to explicitly set both width and height because
+ * we don't want to ruin its aspect ratio.
+ */
+.textbox img,
+.category img {
+    height: 15em;
+    float: left;
+    padding-right: 3em;
+    margin: 0.5em; /* Give space for when the picture zooms */
+    transition: transform .2s;
+}
+
+/* Slightly zoom in on the pictures when hovered */ 
+.textbox img:hover,
+.category img:hover {
+    transform: scale(1.1);
+}
+
+/*
+ * Define a text-intro, a paragraph that starts a distinct semantic area.
+ * We want the first letter of every text intro to be visually distinct.
+ */
+.text-intro::first-letter {
+    font-size: 1.4em;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*
+ * A category is any item on a list of categories such as the product
+ * categories and the products themselves.
+ */
+.category {
+    display: block;
+    background-color: white;
+    border-style: outset;
+    border-width: 0.4em;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 1.5%;
+    margin: 1em;
+    box-shadow: 0em 0em 0.2em 0.2em rgba(0, 37, 138, 0.05);
+    overflow: auto;
+}
+
+/* 
+ * The description of the category. 
+ * Slightly upscaled and with a different font to differentiate it 
+ * from other, general text in the document.
+ */
+.category p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.1em
+}
+
+/* The h3 tag in a category denotes the title of that category. */
+.category h3 {
+    font-size: 1.6em;
+}
+
+/* 
+ * The h5 tag in a category denotes specific product information
+ * such as code, price etc.
+ * We want it to be of a large size and default style.
+ */
+.category h5 {
+    font-size: 1.5em;
+}
+
+/* 
+ * The var tag in a denotes a value for a key-value pair
+ * used in a h5 tag.
+ * A unique color is given to differentiate it from the h5 tag.
+ */
+.category var {
+    color: green;
+}
