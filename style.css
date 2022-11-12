@@ -127,9 +127,10 @@ header h1 {
 
 /* ======= BODY GENERAL ======= */
 
-/* Set slightly larger default sex size for the document's text */
+/* Set text defaults */
 body {
     font-size: 1.15em;
+    font-family: 'Courier New', Courier, monospace;
     background-color: #e3e3e3;
 }
 
@@ -179,6 +180,7 @@ tr:nth-child(even) {
     background-color: lightgray;
 }
 
+/* Display address elements in a row */
 address {
     display: flex;
     justify-content: space-around;
