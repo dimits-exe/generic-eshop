@@ -130,6 +130,7 @@ header h1 {
 /* Set document defaults */
 body {
     font-size: 1.15em;
+    font-family: 'Courier New', Courier, monospace;
     background-color: #e3e3e3;
     font-family: 'Courier New', Courier, monospace;
 }
@@ -213,6 +214,7 @@ tr:nth-child(even) {
     background-color: lightgray;
 }
 
+/* Display address elements in a row */
 address {
     display: flex;
     justify-content: space-around;
