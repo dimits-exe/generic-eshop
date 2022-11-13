@@ -194,7 +194,7 @@ fieldset {
     background-color: lightgray;
     border-style: solid;
     border-color: #00258a;
-    margin-bottom: 2em;
+    padding: 3%;
 }
 
 /* Place fieldset elements vertically */
@@ -225,6 +225,33 @@ fieldset textarea {
     background-color: #f8f8f8;
     font-size: 16px;
     resize: none;
+}
+
+.satisfaction-rating {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.satisfaction-rating > button {
+    width: 20%;
+}
+
+.textbox .satisfaction-rating img {
+    vertical-align: middle;
+    margin: 0px;
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+fieldset > .option * {
+    display: inline;
+}
+
+#questionnaire > input[type="text"] {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Center buttions below the textarea */
