@@ -195,27 +195,34 @@ fieldset {
     border-style: solid;
     border-color: #00258a;
     padding: 3%;
+    border-radius: 1.5em;
+    margin-bottom: 5%;
 }
 
 /* Place fieldset elements vertically */
 fieldset * {
     display: block;
+    text-align: left;
+}
+
+/* Center fieldset headers */
+fieldset > h3 {
+    text-align: center;
 }
 
 /* Give vertical space between fieldsets */
-fieldset label {
-    text-align: left;
+fieldset > label {
     margin-top: 1em;
 }
 
 /* Enlarge fieldset title */
-fieldset legend {
+fieldset > legend {
     font-size: 150%;
     font-weight: 400;
 }
 
 /* Make text area visually distinct */
-fieldset textarea {
+fieldset > textarea {
     width: 100%;
     height: 150px;
     padding: 12px 20px;
@@ -227,17 +234,25 @@ fieldset textarea {
     resize: none;
 }
 
+/* Increase the width of the input fields*/
+fieldset > input {
+    width: 50%;
+}
+
+/* Display the rating images horizontally */
 .satisfaction-rating {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
+/* Make the buttons behind the rating images invisible and if them in the container */
 .satisfaction-rating > button {
-    width: 20%;
+    width: 15%;
     padding: 0%;
 }
 
+/* Fit the images inside the buttons */
 .textbox .satisfaction-rating img {
     vertical-align: middle;
     margin: 0px;
@@ -245,10 +260,13 @@ fieldset textarea {
     aspect-ratio: 1;
 }
 
+/* Display the checkboxes/radioboxes inline with their legends */
 fieldset > .option * {
     display: inline;
+    vertical-align: center;
 }
 
+/* Center the text inputs in the questionaire instead of placing them on the left */
 #questionnaire > input[type="text"] {
     width: 30%;
     margin-left: auto;
@@ -264,7 +282,7 @@ fieldset > .option * {
 }
 
 /* Customize button appearance */
-#button-group button {
+#button-group > button {
     font-size: 200%;
     border-radius: 1em;
     border-color: #00258a;
@@ -279,7 +297,7 @@ fieldset > .option * {
 /* ======= FOOTER ======= */
 
 /* Space out footer elements*/
-footer * {
+footer > * {
     margin-bottom: 0.5em;
 }
 
@@ -300,7 +318,7 @@ footer * {
  * Horizontally center all the footer details, 
  * where each div is an individual detail.
  */
-#footer-details div {
+#footer-details > div {
     text-align: center;
 }
 
@@ -435,7 +453,7 @@ footer * {
 }
 
 /* Give a little vertical spacing between the textbox's text sections */
-.textbox h3 {
+.textbox > h3 {
     margin-top: 2em;
 }
 
