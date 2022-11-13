@@ -41,6 +41,7 @@
         __/  .. \ \ ` ) \                     \.' .. \__
  .-._.-'     '"  ) .-'   `.                   (  '"     `-._.--.
 -->
+
 <body>
     <header>
         <a href="index.html" id="logo-img">
@@ -105,7 +106,7 @@
     <main>
         <article class="textbox">
             <h2>
-                Sign up 
+                Sign up
             </h2>
             <form>
                 <p>
@@ -132,9 +133,9 @@
                         Date of birth:
                     </label>
                     <input id="signup-birthdate" name="signup-birthdate" placeholder="3/11/2012" type="date" />
-                
+
                 </fieldset>
-                
+
                 <fieldset>
                     <legend>
                         Account Information
@@ -173,17 +174,24 @@
                     <legend>
                         Corporate Spam
                     </legend>
-
-                    <label for="spam-option">I would like to receive occassional updates from Faymetrics?</label>
-                    <input type="checkbox" id="spam-option" name="spam-option">
                     
-                    <label for="spam-methods">Please select how you want Faymetrics updates to be delivered to you</label>
+                    <label for="spam-methods">Please select how you want Faymetrics updates to be delivered to
+                        you</label>
                     <select id="spam-methods" name="spam-methods">
                         <option value="sms"> SMS </option>
                         <option value="email"> Email </option>
                         <option value="viber"> Viber </option>
                         <option value="whatsapp"> WhatsApp </option>
                     </select>
+
+                    <div class="option">
+                        <input type="checkbox" id="spam-option" name="spam-option" checked>
+                        <label for="spam-option">
+                            <small>
+                                I would like to receive occassional updates from Faymetrics
+                            </small>
+                        </label>    
+                    </div>
                 </fieldset>
 
                 <fieldset id="questionnaire">
@@ -232,26 +240,36 @@
                         </button>
                     </section>
 
-                    <label for="question-fav-product">What is your favorite Faymetrics product?</label>
+                    <h3>What is your favorite Faymetrics product?</h3>
                     <input type="text" id="question-fav-product" name="question-fav-product">
-                    
-                    <label for="question-why-product">Why product</label>
+
+                    <h3 for="question-why-product">Why product</h3>
                     <textarea id="question-why-product" name="question-why-product">
                         The sex
                     </textarea>
 
                     <h3>How often do you use this product?</h3>
-                    <label for="time-choice-1">Everyday Use</label>
-                    <input type="radio" id="time-choice-1" name="question-time-product" value="everyday use">
 
-                    <label for="time-choice-2">Weekly Use</label>
-                    <input type="radio" id="time-choice-2" name="question-time-product" value="weekly use">
+                    <div class="option">
+                        <input type="radio" id="time-choice-1" name="question-time-product" value="everyday use">
+                        <label for="time-choice-1">Everyday Use</label>
+                    </div>
 
-                    <label for="time-choice-3">Monthly Use</label>
-                    <input type="radio" id="time-choice-3" name="question-time-product" value="monthly use">
+                    <div class="option">
+                        <input type="radio" id="time-choice-2" name="question-time-product" value="weekly use">
+                        <label for="time-choice-2">Weekly Use</label>
+                    </div>
 
-                    <label for="time-choice-4">Rarely</label>
-                    <input type="radio" id="time-choice-4" name="question-time-product" value="rare use">
+                    <div class="option">    
+                        <input type="radio" id="time-choice-3" name="question-time-product" value="monthly use">
+                        <label for="time-choice-3">Monthly Use</label>
+                    </div>
+                    
+                    <div class="option">
+                        <input type="radio" id="time-choice-4" name="question-time-product" value="rare use">
+                        <label for="time-choice-4">Rarely</label>
+                    </div>
+
                 </fieldset>
 
                 <section id="button-group">
@@ -265,46 +283,46 @@
 
     <footer>
         <a href="index.html">
-              <img alt="Faymetrics logo" id="footer-logo-img" src="resources/logo.png" />
+            <img alt="Faymetrics logo" id="footer-logo-img" src="resources/logo.png" />
         </a>
         <article>
-              <address id="footer-address">
-                    <span>
-                          <img alt="location" src="resources/map_pin_icon.png" />
-                          Lamponos 9, 10434 Athens
-                    </span>
-                    <span>
-                          <img alt="telephone" src="resources/phone_icon.png" />
-                          Telephone: +30 6942458
-                    </span>
-                    <span>
-                          <img alt="email" src="resources/mail_icon.png" />
-                          Email: faymetrics@gmail.com
-                    </span>
-              </address>
+            <address id="footer-address">
+                <span>
+                    <img alt="location" src="resources/map_pin_icon.png" />
+                    Lamponos 9, 10434 Athens
+                </span>
+                <span>
+                    <img alt="telephone" src="resources/phone_icon.png" />
+                    Telephone: +30 6942458
+                </span>
+                <span>
+                    <img alt="email" src="resources/mail_icon.png" />
+                    Email: faymetrics@gmail.com
+                </span>
+            </address>
         </article>
         <section class="social-media-bar">
-              <img alt="linkedin icon" src="resources\linkedin_gkiwnis.png" />
-              <img alt="twitter icon" src="resources\twitter.png" />
-              <img alt="instagram icon" src="resources\instagram.png" />
-              <img alt="facebook icon" class="cssex" src="resources\facebook.png" />
+            <img alt="linkedin icon" src="resources\linkedin_gkiwnis.png" />
+            <img alt="twitter icon" src="resources\twitter.png" />
+            <img alt="instagram icon" src="resources\instagram.png" />
+            <img alt="facebook icon" class="cssex" src="resources\facebook.png" />
         </section>
         <article id="footer-details">
-              <div>
-                    Copyright © 2022 Faymetrics, Inc.
-              </div>
-              <div>
-                    <a href="privacy.html">
-                          Privacy Policy
-                    </a>
-              </div>
-              <div>
-                    <a href="security.html">
-                          Security
-                    </a>
-              </div>
+            <div>
+                Copyright © 2022 Faymetrics, Inc.
+            </div>
+            <div>
+                <a href="privacy.html">
+                    Privacy Policy
+                </a>
+            </div>
+            <div>
+                <a href="security.html">
+                    Security
+                </a>
+            </div>
         </article>
-  </footer>
+    </footer>
 </body>
 
 </html>
