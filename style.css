@@ -269,6 +269,7 @@ fieldset textarea {
 
 .satisfaction-rating > button {
     width: 20%;
+    padding: 0%;
 }
 
 .textbox .satisfaction-rating img {
