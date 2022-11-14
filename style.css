@@ -307,7 +307,7 @@ footer * {
 /* ======= MEDIA QUERIES ======= */
 
 /* Phones */
-@media screen and (min-width: 360px) {
+@media screen and (min-width: 100px) {
     /* 
      * Display a list of categories or products in a single column.
      *
@@ -331,6 +331,12 @@ footer * {
         margin-right: 2%;
         margin-left: 2%;
     }
+
+    .textbox .pefki img {
+        width: 35%;
+    }
+
+
 }
 
 /* Tablets */
@@ -357,6 +363,12 @@ footer * {
         margin-right: 5%;
         margin-left: 5%;
     }
+
+    .textbox .pefki img {
+        width: 25%;
+    }
+
+
 }
 
 /* Computers */
@@ -382,6 +394,11 @@ footer * {
         margin-right: 15%;
         margin-left: 15%;
     }
+
+    .textbox .pefki img {
+        width: 25%;
+    }
+
 }
 
 /* ======= USER DEFINED BOXES ======= */
@@ -418,9 +435,9 @@ footer * {
 .category img {
     float: left;
     /* Give space for when the picture zooms */
-    margin-right: 10%;
-    margin-bottom: 10%;
-    
+    margin-right: 3.7%;
+    margin-left: 4%;
+    margin-bottom: 3.5%;
     transition: transform .2s;
 }
 
