@@ -187,6 +187,16 @@ address {
     align-items: center;
 }
 
+/* Mark valid input as green */
+input:valid {
+    border-color:green;
+}
+
+/* Mark invalid input as red */
+input:invalid {
+    border-color: red;
+}
+
 /* ======= FORMS ======= */
 
 /* Make the fieldset container visually distinct from other page elements */
@@ -197,12 +207,15 @@ fieldset {
     padding: 3%;
     border-radius: 1.5em;
     margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Place fieldset elements vertically */
-fieldset * {
+/* Vertically center fieldset children */
+fieldset > * {
     display: block;
     text-align: left;
+    align-self: center;
 }
 
 /* Center fieldset headers */
