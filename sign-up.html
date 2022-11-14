@@ -120,19 +120,33 @@
                     <label for="signup-full-name">
                         Full Name:
                     </label>
-                    <input id="signup-full-name" name="signup-full-name" type="text" />
+                    <input type="text" id="signup-full-name" name="signup-full-name" placeholder="John Smith"
+                        title="Full Name" required />
                     <label for="signup-email">
                         Email:
                     </label>
-                    <input id="signup-email" name="signup-email" placeholder="example@gmail.com" type="email" />
+                    <!--Email inputs automatically check for correct regex-->
+                    <input type="email" id="signup-email" name="signup-email" placeholder="example@gmail.com"
+                        title="Personal Email" required />
                     <label for="signup-telephone">
                         Telephone:
                     </label>
-                    <input id="signup-telephone" name="signup-birthdate" placeholder="+30694523945" type="tel" />
+                    <!-- Matches the following types:
+                        123-456-7890
+                        (123) 456-7890
+                        123 456 7890
+                        123.456.7890
+                        +91 (123) 456-7890
+                        Yes I stole this from SO
+                    -->
+                    <input type="tel" id="signup-telephone" name="signup-birthdate" placeholder="+30694523945"
+                        title="Personal Telephone" pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$"
+                        required />
                     <label for="signup-birthdate">
                         Date of birth:
                     </label>
-                    <input id="signup-birthdate" name="signup-birthdate" placeholder="3/11/2012" type="date" />
+                    <input type="date" id="signup-birthdate" name="signup-birthdate" min="1900-1-1" max="2030-1-1"
+                        placeholder="2022-11-3" title="Birthdate" required />
 
                 </fieldset>
 
@@ -141,14 +155,22 @@
                         Account Information
                     </legend>
 
-                    <label for="signup-username">Username:</label>
-                    <input type="text" id="signup-username" name="signup-username">
+                    <label for="signup-username">Username (at least 8 characters long):</label>
+                    <input type="text" id="signup-username" name="signup-username" pattern="^[a-zA-Z0-9._-]{8,}$"
+                        placeholder="aNormalUsername"
+                        title="any letter from a-z, can use underscores, points and dashes, at least 8 characters long"
+                        required>
 
                     <label for="signup-password">Password:</label>
-                    <input type="password" id="signup-password" name="signup-password">
+                    <input type="password" id="signup-password" name="signup-password"
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                        required>
 
                     <label for="signup-password-2nd">Enter your password again:</label>
-                    <input type="password" id="signup-password-2nd">
+                    <input type="password" id="signup-password-2nd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                        required>
                 </fieldset>
 
                 <fieldset>
@@ -160,27 +182,29 @@
                         <option value="Cash"> Pay With Cash </option>
                         <option value="PayPal"> PayPal </option>
                         <option value="National Bank of Greece">National Bank Of Greece</option>
-                        <option value="National Bank of Greece">Master Card</option>
+                        <option value="Master Bank">Master Card</option>
+                        <option value="Tik Tok">TikTok</option>
                     </select>
 
                     <label for="payment-details"> Payment Details:</label>
-                    <input type="text" id="payment-details" name="payment-details">
+                    <!--This is a fake IBAN-->
+                    <input type="text" id="payment-details" name="payment-details" placeholder="UA674343395323521253293756269 12-06 139">
                     <details>
                         <summary>Help⬇</summary>
-                        <small>
+                        <p>
                             Your PayPal ID or your card's info including code, expiry date and safety number.
-                            Leave blank if cash. 
+                            Leave blank if cash.
                         </small>
                     </details>
                     <label for="signup-address"> Address: </label>
-                    <input type="text" id="signup-address" name="signup-address">
+                    <input type="text" id="signup-address" placeholder="31st Rue de Jardin 15567 Paris" name="signup-address" required>
                 </fieldset>
 
                 <fieldset>
                     <legend>
                         Corporate Spam
                     </legend>
-                    
+
                     <label for="spam-methods">Please select how you want Faymetrics updates to be delivered to
                         you</label>
                     <select id="spam-methods" name="spam-methods">
@@ -196,7 +220,7 @@
                             <small>
                                 I would like to receive occassional updates from Faymetrics
                             </small>
-                        </label>    
+                        </label>
                     </div>
                 </fieldset>
 
@@ -247,8 +271,8 @@
                     </section>
 
                     <h3>What is your favorite Faymetrics product?</h3>
-                    <input type="text" id="question-fav-product" name="question-fav-product" 
-                    autocomplete="question-fav-product" list="product-list">
+                    <input type="text" id="question-fav-product" name="question-fav-product"
+                        autocomplete="question-fav-product" list="product-list">
 
                     <h3 for="question-why-product">Why product</h3>
                     <textarea id="question-why-product" name="question-why-product">
@@ -256,7 +280,7 @@
                     </textarea>
 
                     <h3>How often do you use this product?</h3>
-                    
+
                     <div class="option">
                         <input type="radio" id="time-choice-1" name="question-time-product" value="everyday use">
                         <label for="time-choice-1">Everyday Use</label>
@@ -267,11 +291,11 @@
                         <label for="time-choice-2">Weekly Use</label>
                     </div>
 
-                    <div class="option">    
+                    <div class="option">
                         <input type="radio" id="time-choice-3" name="question-time-product" value="monthly use">
                         <label for="time-choice-3">Monthly Use</label>
                     </div>
-                    
+
                     <div class="option">
                         <input type="radio" id="time-choice-4" name="question-time-product" value="rare use">
                         <label for="time-choice-4">Rarely</label>
@@ -280,13 +304,13 @@
                 </fieldset>
 
                 <datalist id="product-list">
-                    <option value="#EFFVG34"/>
-                    <option value="#ABDFG"/>
-                    <option value="#YPOFE45"/>
-                    <option value="#JHGFE45"/>
-                    <option value="#IIIFR127"/>
-                    <option value="#UCVMR127"/>
-                    <option value="#PTUR127"/>
+                    <option value="#EFFVG34" />
+                    <option value="#ABDFG" />
+                    <option value="#YPOFE45" />
+                    <option value="#JHGFE45" />
+                    <option value="#IIIFR127" />
+                    <option value="#UCVMR127" />
+                    <option value="#PTUR127" />
                 </datalist>
 
                 <section id="button-group">
