@@ -189,7 +189,7 @@ address {
 
 /* Mark valid input as green */
 input:valid {
-    border-color:green;
+    border-color: green;
 }
 
 /* Mark invalid input as red */
@@ -212,30 +212,37 @@ fieldset {
 }
 
 /* Vertically center fieldset children */
-fieldset > * {
+fieldset>* {
     display: block;
     text-align: left;
     align-self: center;
 }
 
+/* Keep all stand-alone text and summary-details in the center when expanded */
+fieldset summary,
+fieldset details,
+fieldset>p {
+    text-align: center;
+}
+
 /* Center fieldset headers */
-fieldset > h3 {
+fieldset>h3 {
     text-align: center;
 }
 
 /* Give vertical space between fieldsets */
-fieldset > label {
-    margin-top: 1em;
+fieldset>label {
+    margin-top: 1.5em;
 }
 
 /* Enlarge fieldset title */
-fieldset > legend {
+fieldset>legend {
     font-size: 150%;
     font-weight: 400;
 }
 
 /* Make text area visually distinct */
-fieldset > textarea {
+fieldset>textarea {
     width: 100%;
     height: 150px;
     padding: 12px 20px;
@@ -245,10 +252,11 @@ fieldset > textarea {
     background-color: #f8f8f8;
     font-size: 16px;
     resize: none;
+    text-align: center;
 }
 
 /* Increase the width of the input fields*/
-fieldset > input {
+fieldset>input {
     width: 50%;
 }
 
@@ -260,7 +268,7 @@ fieldset > input {
 }
 
 /* Make the buttons behind the rating images invisible and if them in the container */
-.satisfaction-rating > button {
+.satisfaction-rating>button {
     width: 15%;
     padding: 0%;
 }
@@ -274,13 +282,20 @@ fieldset > input {
 }
 
 /* Display the checkboxes/radioboxes inline with their legends */
-fieldset > .option * {
+fieldset>.option * {
     display: inline;
     vertical-align: center;
 }
 
+/* Simplify questionnaire headers */
+#questionnaire>h3 {
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-top: 4em;
+}
+
 /* Center the text inputs in the questionaire instead of placing them on the left */
-#questionnaire > input[type="text"] {
+#questionnaire>input[type="text"] {
     width: 30%;
     margin-left: auto;
     margin-right: auto;
@@ -295,7 +310,7 @@ fieldset > .option * {
 }
 
 /* Customize button appearance */
-#button-group > button {
+#button-group>button {
     font-size: 200%;
     border-radius: 1em;
     border-color: #00258a;
@@ -310,7 +325,7 @@ fieldset > .option * {
 /* ======= FOOTER ======= */
 
 /* Space out footer elements*/
-footer > * {
+footer>* {
     margin-bottom: 0.5em;
 }
 
@@ -331,7 +346,7 @@ footer > * {
  * Horizontally center all the footer details, 
  * where each div is an individual detail.
  */
-#footer-details > div {
+#footer-details>div {
     text-align: center;
 }
 
@@ -362,13 +377,14 @@ footer > * {
 .social-media-bar img {
     max-width: 2em;
     max-height: 2em;
-    margin:0px;
+    margin: 0px;
 }
 
 /* ======= MEDIA QUERIES ======= */
 
 /* Phones */
 @media screen and (min-width: 360px) {
+
     /* 
      * Display a list of categories or products in a single column.
      *
@@ -396,7 +412,7 @@ footer > * {
 
 /* Tablets */
 @media screen and (min-width: 820px) {
-    
+
     /* Display a list of categories or products in 2 columns */
     .category-list {
         display: grid;
@@ -466,7 +482,7 @@ footer > * {
 }
 
 /* Give a little vertical spacing between the textbox's text sections */
-.textbox > h3 {
+.textbox>h3 {
     margin-top: 2em;
 }
 
@@ -481,11 +497,11 @@ footer > * {
     /* Give space for when the picture zooms */
     margin-right: 10%;
     margin-bottom: 10%;
-    
+
     transition: transform .2s;
 }
 
-/* Slightly zoom in on the pictures when hovered */ 
+/* Slightly zoom in on the pictures when hovered */
 .textbox img:hover,
 .category img:hover {
     transform: scale(1.1);
