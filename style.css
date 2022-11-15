@@ -281,7 +281,6 @@ fieldset>input {
     cursor: pointer;
 }
 
-
 /* Change the appearance of the selected image to be darker and larger */
 .satisfaction-rating input[type=radio]:checked+label>img {
     opacity: 1;
@@ -474,6 +473,12 @@ footer>* {
     .textbox {
         margin-right: 15%;
         margin-left: 15%;
+    }
+
+    #sign-up {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1%;
     }
 }
 
