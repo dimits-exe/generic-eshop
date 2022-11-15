@@ -267,17 +267,33 @@ fieldset>input {
     align-items: center;
 }
 
-/* Make the buttons behind the rating images invisible and if them in the container */
-.satisfaction-rating>button {
-    width: 15%;
-    padding: 0%;
+/* 
+* We will use radio buttons disguised as radio buttons.
+* Hide radio buttons adjacent to our images.
+*/
+.satisfaction-rating input[type=radio] {
+    display: none;
+}
+
+/* Show that images are in fact radio buttons when hovered upon */
+.satisfaction-rating img:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+
+/* Change the appearance of the selected image to be darker and larger */
+.satisfaction-rating input[type=radio]:checked+label>img {
+    opacity: 1;
+    filter: brightness(80%);
+    height: 10em;
 }
 
 /* Fit the images inside the buttons */
 .textbox .satisfaction-rating img {
     vertical-align: middle;
-    margin: 0px;
-    width: 100%;
+    width: 90%;
+    height: 8em;
     aspect-ratio: 1;
 }
 
