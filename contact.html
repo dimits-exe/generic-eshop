@@ -64,6 +64,19 @@
             <a href="contact.html" tabindex="6">
                 Contact us
             </a>
+            <section class="dropdown" tabindex="7">
+                <button class="dropbtn">
+                    My Account
+                </button>
+                <section class="dropdown-content">
+                    <a href="sign-up.html">
+                        Sign Up
+                    </a>
+                    <a>
+                        Log In
+                    </a>
+                </section>
+            </section>
         </nav>
     </header>
     <main>
@@ -179,8 +192,8 @@
                     <label for="product_code">
                         Product Code:
                     </label>
-                    <input id="product_code" name="product_code" placeholder="#ADFG445" 
-                    type="text" autocomplete="product_code" list="product-list" />
+                    <input autocomplete="product_code" id="product_code" list="product-list" name="product_code"
+                        placeholder="#ADFG445" type="text" />
                     <label for="product_date">
                         Product Date:
                     </label>
@@ -205,13 +218,20 @@
                     </button>
                 </section>
                 <datalist id="product-list">
-                    <option value="#EFFVG34"/>
-                    <option value="#ABDFG"/>
-                    <option value="#YPOFE45"/>
-                    <option value="#JHGFE45"/>
-                    <option value="#IIIFR127"/>
-                    <option value="#UCVMR127"/>
-                    <option value="#PTUR127"/>
+                    <option value="#EFFVG34">
+                    </option>
+                    <option value="#ABDFG">
+                    </option>
+                    <option value="#YPOFE45">
+                    </option>
+                    <option value="#JHGFE45">
+                    </option>
+                    <option value="#IIIFR127">
+                    </option>
+                    <option value="#UCVMR127">
+                    </option>
+                    <option value="#PTUR127">
+                    </option>
                 </datalist>
             </form>
         </article>
