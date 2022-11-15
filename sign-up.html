@@ -110,26 +110,29 @@
             </h2>
             <form>
                 <p>
-                    THE SEXXING IS UPON US
+                    Create a free private or corporate account.
                 </p>
                 <fieldset>
 
                     <legend>
                         Personal Information
                     </legend>
+
                     <label for="signup-full-name">
                         Full Name:
                     </label>
                     <input type="text" id="signup-full-name" name="signup-full-name" placeholder="John Smith"
-                        title="Full Name" required />
+                        title="Full Name" minlength="4" autocomplete="name" required />
+
                     <label for="signup-email">
                         Email:
                     </label>
                     <!--Email inputs automatically check for correct regex-->
                     <input type="email" id="signup-email" name="signup-email" placeholder="example@gmail.com"
-                        title="Personal Email" required />
+                        title="Personal Email" autocomplete="email" required />
+
                     <label for="signup-telephone">
-                        Telephone:
+                        Personal Number:
                     </label>
                     <!-- Matches the following types:
                         123-456-7890
@@ -141,13 +144,21 @@
                     -->
                     <input type="tel" id="signup-telephone" name="signup-birthdate" placeholder="+30694523945"
                         title="Personal Telephone" pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$"
-                        required />
+                        autocomplete="tel" required />
+
                     <label for="signup-birthdate">
-                        Date of birth:
+                        Date of Birth:
                     </label>
                     <input type="date" id="signup-birthdate" name="signup-birthdate" min="1900-1-1" max="2030-1-1"
-                        placeholder="2022-11-3" title="Birthdate" required />
+                        placeholder="2022-11-3" title="Birthdate" autocomplete="bday" required />
 
+                    <label for="org-name">Organization Name (Leave blank if not representing an organization):</label>
+                    <input type="text" id="org-name" name="org-name" title="Organization Name"
+                        autocomplete="organization" placeholder="McJordan Shipping LTE">
+
+                    <label for="org-email">Organization Email (Leave blank if not representing an organization):</label>
+                    <input type="text" id="org-email" name="org-email" title="Organization Name" autocomplete="on"
+                        placeholder="example@gmail.com">
                 </fieldset>
 
                 <fieldset>
@@ -158,16 +169,16 @@
                     <label for="signup-username">Username (at least 8 characters long):</label>
                     <input type="text" id="signup-username" name="signup-username" pattern="^[a-zA-Z0-9._-]{8,}$"
                         placeholder="aNormalUsername"
-                        title="any letter from a-z, can use underscores, points and dashes, at least 8 characters long"
-                        required>
+                        title="Any letter from a-z, can use underscores, points and dashes, at least 8 characters long"
+                        autocomplete="username" required>
 
                     <label for="signup-password">Password:</label>
                     <input type="password" id="signup-password" name="signup-password"
                         pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                         title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
-                        required>
+                        autocomplete="new-password" required>
 
-                    <label for="signup-password-2nd">Enter your password again:</label>
+                    <label for="signup-password-2nd">Confirm password:</label>
                     <input type="password" id="signup-password-2nd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                         title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
                         required>
@@ -188,16 +199,18 @@
 
                     <label for="payment-details"> Payment Details:</label>
                     <!--This is a fake IBAN-->
-                    <input type="text" id="payment-details" name="payment-details" placeholder="UA674343395323521253293756269 12-06 139">
+                    <input type="text" id="payment-details" name="payment-details"
+                        placeholder="UA674343395323521253293756269 12-06 139">
                     <details>
                         <summary>Help⬇</summary>
                         <p>
                             Your PayPal ID or your card's info including code, expiry date and safety number.
                             Leave blank if cash.
-                        </small>
+                            </small>
                     </details>
                     <label for="signup-address"> Address: </label>
-                    <input type="text" id="signup-address" placeholder="31st Rue de Jardin 15567 Paris" name="signup-address" required>
+                    <input type="text" id="signup-address" placeholder="31st Rue de Jardin 15567 Paris"
+                        name="signup-address" autocomplete="street-address" required>
                 </fieldset>
 
                 <fieldset>
@@ -228,77 +241,82 @@
                     <legend>Satisfaction Survey</legend>
 
                     <p>
-                        Please take a minute of your time to answer this very important
-                        and epic questionnaire it would make me very happy :333
+                        Please take a minute of your time to answer this survey about your organization, if you are
+                        affiliated with one.
+                        The form is optional but would greately help us enhance your experience.
                     </p>
 
                     <h3>How would you rate your exprience with Faymetrics?</h3>
                     <section class="satisfaction-rating">
                         <button>
-                            <img src="resources/one.png" alt="5">
+                            <img src="resources/one.png" alt="5" title="Good">
                         </button>
                         <button>
-                            <img src="resources/two.png" alt="4">
+                            <img src="resources/two.png" alt="4" title="Satisfactory">
                         </button>
                         <button>
-                            <img src="resources/three.png" alt="3">
+                            <img src="resources/three.png" alt="3" title="Acceptable">
                         </button>
                         <button>
-                            <img src="resources/four.png" alt="2">
+                            <img src="resources/four.png" alt="2" title="Frustating">
                         </button>
                         <button>
-                            <img src="resources/five.png" alt="1">
+                            <img src="resources/five.png" alt="1" title="Excruciating">
                         </button>
                     </section>
+
+                    <h3> Which category do you think Faymetrics® excels compared to its competitors?</h3>
+                    <input type="text" name="question-better-category" placeholder="Maintainance and Reliabililty"
+                        list="category-list">
+
 
                     <h3>How would you rate our customer support?</h3>
                     <section class="satisfaction-rating">
                         <button>
-                            <img src="resources/one.png" alt="5">
+                            <img src="resources/one.png" alt="5" title="Good">
                         </button>
                         <button>
-                            <img src="resources/two.png" alt="4">
+                            <img src="resources/two.png" alt="4" title="Satisfactory">
                         </button>
                         <button>
-                            <img src="resources/three.png" alt="3">
+                            <img src="resources/three.png" alt="3" title="Acceptable">
                         </button>
                         <button>
-                            <img src="resources/four.png" alt="2">
+                            <img src="resources/four.png" alt="2" title="Frustating">
                         </button>
                         <button>
-                            <img src="resources/five.png" alt="1">
+                            <img src="resources/five.png" alt="1" title="Excruciating">
                         </button>
                     </section>
 
-                    <h3>What is your favorite Faymetrics product?</h3>
-                    <input type="text" id="question-fav-product" name="question-fav-product"
-                        autocomplete="question-fav-product" list="product-list">
+                    <h3>Which is your organization's most valuable Faymetrics product?</h3>
+                    <input type="text" id="question-fav-product" name="question-fav-product" placeholder="#EFFVG34"
+                        title="Product code" list="product-list">
 
-                    <h3 for="question-why-product">Why product</h3>
-                    <textarea id="question-why-product" name="question-why-product">
-                        The sex
-                    </textarea>
+                    <h3 for="question-why-product">In which ways has the product aided your organization?</h3>
+                    <textarea id="question-why-product" name="question-why-product"
+                        placeholder="Please describe how the product was used..." /></textarea>
 
-                    <h3>How often do you use this product?</h3>
+                    <h3>How much does your organization depend on this product?</h3>
 
                     <div class="option">
-                        <input type="radio" id="time-choice-1" name="question-time-product" value="everyday use">
-                        <label for="time-choice-1">Everyday Use</label>
+                        <input type="radio" id="depend-choice-1" name="question-depend-product" value="optional">
+                        <label for="depend-choice-1">Optional Use</label>
                     </div>
 
                     <div class="option">
-                        <input type="radio" id="time-choice-2" name="question-time-product" value="weekly use">
-                        <label for="time-choice-2">Weekly Use</label>
+                        <input type="radio" id="depend-choice-2" name="question-depend-product" value="regular">
+                        <label for="depend-choice-2">Regular Use</label>
                     </div>
 
                     <div class="option">
-                        <input type="radio" id="time-choice-3" name="question-time-product" value="monthly use">
-                        <label for="time-choice-3">Monthly Use</label>
+                        <input type="radio" id="depend-choice-3" name="question-depend-product" value="necessary">
+                        <label for="depend-choice-3">Necessary Use</label>
                     </div>
 
                     <div class="option">
-                        <input type="radio" id="time-choice-4" name="question-time-product" value="rare use">
-                        <label for="time-choice-4">Rarely</label>
+                        <input type="radio" id="depend-choice-4" name="question-depend-product" value="critical">
+                        <label for="depend-choice-4">Critical Necessity</label>
                     </div>
 
                 </fieldset>
@@ -312,6 +330,33 @@
                     <option value="#UCVMR127" />
                     <option value="#PTUR127" />
                 </datalist>
+
+                <datalist id="category-list">
+                    <option value="Ecology Products" />
+                    <option value="Meteorology Products" />
+                    <option value="Research and Innovation" />
+                    <option value="Outreach and Customer Satisfaction" />
+                    <option value="Maintainance and Reliabililty" />
+                    <option value="Ease of Use and Accessibility" />
+                </datalist>
+
+                <div class="option">
+                    <input type="checkbox" id="spam-option" name="spam-option" required>
+                    <label for="spam-option">
+                        <small>
+                            I understand and agree with the Faymetrics® Terms of Service (ToS).
+                        </small>
+                    </label>
+                </div>
+
+                <div class="option">
+                    <input type="checkbox" id="spam-option" name="spam-option" required>
+                    <label for="spam-option">
+                        <small>
+                            I consent with the Faymetrics® cookie and personal data policy.
+                        </small>
+                    </label>
+                </div>
 
                 <section id="button-group">
                     <button type="submit">
