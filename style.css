@@ -276,7 +276,7 @@ footer * {
 
 /* Set size for address icons */
 #footer-address img {
-    height: 2em;
+    max-height: 12em;
     display: flex;
     align-items: center;
 }
@@ -299,8 +299,8 @@ footer * {
 
 /* Set max social media icons size */
 .social-media-bar img {
-    max-width: 2em;
-    max-height: 2em;
+    max-width: 7em;
+    max-height: 7em;
     margin:0px;
 }
 
@@ -324,6 +324,17 @@ footer * {
     .textbox img,
     .category img {
         width: 95%;
+    }
+
+    /* Set size for address icons */
+    #footer-address img {
+        width: 60%
+    }
+
+    /* Set max social media icons size */
+    .social-media-bar img {
+        width: 20%;
+        height: 20%;
     }
 
     /* Leave minimal side margins to conserve space */
@@ -364,6 +375,17 @@ footer * {
         margin-left: 5%;
     }
 
+    /* Set max social media icons size */
+    .social-media-bar img {
+        width: 20%;
+        height: 20%;
+    }
+
+    /* Set size for address icons */
+    #footer-address img {
+        width: 60%
+    }
+
     .textbox .pefki img {
         width: 25%;
     }
@@ -384,6 +406,17 @@ footer * {
     .textbox img,
     .category img {
         width: 90%;
+    }
+
+    /* Set size for address icons */
+    #footer-address img {
+        width: 70%
+    }
+
+    /* Set max social media icons size */
+    .social-media-bar img {
+        width: 20%;
+        height: 20%;
     }
 
     /* 
