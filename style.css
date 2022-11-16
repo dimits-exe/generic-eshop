@@ -271,7 +271,6 @@ footer * {
 
 /* Set size for address icons */
 #footer-address img {
-    max-height: 12em;
     display: flex;
     align-items: center;
 }
@@ -296,13 +295,23 @@ footer * {
 .social-media-bar img {
     max-width: 7em;
     max-height: 7em;
-    margin:0px;
 }
 
 /* ======= MEDIA QUERIES ======= */
 
 /* Phones */
 @media screen and (min-width: 100px) {
+
+    /* Keep size small and constant in phones */
+    header h1 {
+        font-size: 3rem;
+    }
+
+     /* Keep size small and constant in phones */
+    header h2 {
+        font-size: 2rem;
+    }
+
     /* 
      * Display a list of categories or products in a single column.
      *
@@ -321,15 +330,10 @@ footer * {
         width: 95%;
     }
 
-    /* Set size for address icons */
-    #footer-address img {
-        width: 60%
-    }
-
-    /* Set max social media icons size */
+    /* Set small social media and address icons size */
+    #footer-address img,
     .social-media-bar img {
-        width: 20%;
-        height: 20%;
+        height: 3em;
     }
 
     /* Leave minimal side margins to conserve space */
@@ -347,6 +351,16 @@ footer * {
 
 /* Tablets */
 @media screen and (min-width: 820px) {
+
+    /* Keep size large and constant */
+    header h1 {
+        font-size: 4.5rem;
+    }
+
+    /* Keep size large and constant */
+    header h2 {
+        font-size: 2rem;
+    }
     
     /* Display a list of categories or products in 2 columns */
     .category-list {
@@ -372,13 +386,17 @@ footer * {
 
     /* Set max social media icons size */
     .social-media-bar img {
-        width: 20%;
-        height: 20%;
+        width: 5%;
+        height: 5%;
     }
 
-    /* Set size for address icons */
+    #footer-address {
+        height: 10em;
+    }
+
+    /* Set constant size for address icons */
     #footer-address img {
-        width: 60%
+        height: 3em;
     }
 
     .textbox .pefki img {
@@ -390,6 +408,16 @@ footer * {
 
 /* Computers */
 @media screen and (min-width: 1664px) {
+
+    /* Keep size small and constant in phones */
+    header h1 {
+        font-size: 6rem;
+    }
+
+    /* Keep size small and constant in phones */
+    header h2 {
+        font-size: 2.5rem;
+    }
 
     /* Display a list of categories or products in 3 columns */
     .category-list {
@@ -403,15 +431,23 @@ footer * {
         width: 90%;
     }
 
+    #footer-address {
+        height: 10em;
+    }
+
+    #footer-address>span{
+        height:90%;
+    }
+
     /* Set size for address icons */
     #footer-address img {
-        width: 70%
+        height: 50%;
     }
 
     /* Set max social media icons size */
     .social-media-bar img {
-        width: 20%;
-        height: 20%;
+        width: 5%;
+        height: 5%;
     }
 
     /* 
