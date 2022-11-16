@@ -248,6 +248,16 @@ footer * {
     margin-bottom: 0.5em;
 }
 
+/* Make distinct from background */
+footer a {
+    color: white;
+}
+
+/* Choose a different color than blue because of background */
+footer a:hover {
+    color: blueviolet;
+}
+
 /* Set footer image size and place it in the centre */
 #footer-logo-img {
     display: block;
