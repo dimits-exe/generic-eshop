@@ -13,12 +13,12 @@ header {
 }
 
 /* Place image on the left of the header */
-#logo-img {
+#header-logo {
     float: left;
     padding-right: 1em;
 }
 
-#logo-img a {
+#header-logo a {
     padding-bottom: 0em;
 }
 
@@ -243,9 +243,18 @@ fieldset textarea {
 
 /* ======= FOOTER ======= */
 
-/* Space out footer elements*/
-footer * {
-    margin-bottom: 0.5em;
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Space out horizontally footer sections and give them all the available width*/
+footer>* {
+    margin-bottom: 2em;
+    width: 100%;
 }
 
 /* Make distinct from background */
@@ -258,31 +267,36 @@ footer a:hover {
     color: blueviolet;
 }
 
-/* Set footer image size and place it in the centre */
-#footer-logo-img {
-    display: block;
-    width: 40%;
-    margin-left: auto;
-    margin-right: auto;
+/* Contain image inside logo container */
+#footer-logo>img {
+    width: 100%;
 }
 
-/* Create vertical space between contact details and image */
-#footer-details {
-    margin-top: 2em;
+/* Spread out the address containers */
+#footer-address>span {
+    display: flex;
+    justify-content: space-between;
+    text-align: start;
 }
 
-/* 
- * Horizontally center all the footer details, 
- * where each div is an individual detail.
- */
-#footer-details div {
-    text-align: center;
+/* Give some horizontal space between the image and the value for each container */
+#footer-address>span>* {
+    margin-right: 5%;
 }
 
 /* Set size for address icons */
 #footer-address img {
     display: flex;
     align-items: center;
+}
+
+/* Create a column with the details at the bottom of the footer */
+#footer-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
 }
 
 /* Keep the icons used for the addresses small */
@@ -317,7 +331,7 @@ footer a:hover {
         font-size: 3rem;
     }
 
-     /* Keep size small and constant in phones */
+    /* Keep size small and constant in phones */
     header h2 {
         font-size: 2rem;
     }
@@ -356,6 +370,10 @@ footer a:hover {
         width: 35%;
     }
 
+    /* Occupy all of the screen width */
+    #footer-logo {
+        width: 100%;
+    }
 
 }
 
@@ -371,7 +389,7 @@ footer a:hover {
     header h2 {
         font-size: 2rem;
     }
-    
+
     /* Display a list of categories or products in 2 columns */
     .category-list {
         display: grid;
@@ -400,6 +418,12 @@ footer a:hover {
         height: 5%;
     }
 
+    /* Occupy most of the screen width */
+    #footer-logo {
+        width: 80%;
+    }
+
+    /* Give vertical space to the address bar */
     #footer-address {
         height: 10em;
     }
@@ -441,25 +465,6 @@ footer a:hover {
         width: 90%;
     }
 
-    #footer-address {
-        height: 10em;
-    }
-
-    #footer-address>span{
-        height:90%;
-    }
-
-    /* Set size for address icons */
-    #footer-address img {
-        height: 50%;
-    }
-
-    /* Set max social media icons size */
-    .social-media-bar img {
-        width: 5%;
-        height: 5%;
-    }
-
     /* 
      * Leave extensive margins so the user's focus is
      * kept to the middle of the screen.
@@ -471,6 +476,38 @@ footer a:hover {
 
     .textbox .pefki img {
         width: 25%;
+    }
+
+    /* Occupy some of the screen width */
+    #footer-logo {
+        width: 40%;
+    }
+
+    /* Set max social media icons size */
+    .social-media-bar img {
+        width: 5%;
+        height: 5%;
+    }
+
+    /* Give vertical space to the address bar */
+    #footer-address {
+        height: 10em;
+    }
+
+    /* Give most of the horizontal space to the address containers */
+    #footer-address>span {
+        height: 90%;
+    }
+
+    /* Slightly increase font size for larger screens */
+    footer p,
+    footer a {
+        font-size: 1.3em;
+    }
+
+    /* Set size for address icons */
+    #footer-address img {
+        height: 50%;
     }
 
 }
@@ -515,7 +552,7 @@ footer a:hover {
     transition: transform .2s;
 }
 
-/* Slightly zoom in on the pictures when hovered */ 
+/* Slightly zoom in on the pictures when hovered */
 .textbox img:hover,
 .category img:hover {
     transform: scale(1.1);
