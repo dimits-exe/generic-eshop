@@ -353,6 +353,13 @@ footer a:hover {
         width: 95%;
     }
 
+    /* Slightly zoom in on the pictures when hovered */
+    .textbox img:hover,
+    .category img:hover {
+        transform: scale(1.1);
+        z-index: 1;
+    }
+
     /* Set small social media and address icons size */
     #footer-address img,
     .social-media-bar img {
@@ -405,6 +412,13 @@ footer a:hover {
     .textbox {
         margin-right: 5%;
         margin-left: 5%;
+    }
+
+    /* Slightly zoom in on the pictures when hovered */
+    .textbox img:hover,
+    .category img:hover {
+        transform: scale(1.1);
+        z-index: 1;
     }
 
     /* Set max social media icons size */
@@ -462,9 +476,18 @@ footer a:hover {
     }
 
     /* Cover container width, leaving some space for zooming */
-    .textbox img,
     .category img {
         width: 90%;
+        margin: 1rem;
+    }
+
+    /* 
+     * Images used by categories and textboxes that don't belong in a list 
+     * need to be much smaller because of the sheer size of their containers. 
+     */
+    .textbox img,
+    .category.single img {
+        width: 40%;
     }
 
     /* 
@@ -474,6 +497,13 @@ footer a:hover {
     .textbox {
         margin-right: 15%;
         margin-left: 15%;
+    }
+
+    /* Decrease zoom because of the larger size used for images here */
+    .textbox img:hover,
+    .category img:hover {
+        transform: scale(1.03);
+        z-index: 1;
     }
 
     /* Slighty downscale the images on the about us page */
@@ -548,13 +578,6 @@ footer a:hover {
     margin-left: 4%;
     margin-bottom: 3.5%;
     transition: transform .2s;
-}
-
-/* Slightly zoom in on the pictures when hovered */
-.textbox img:hover,
-.category img:hover {
-    transform: scale(1.1);
-    z-index: 1;
 }
 
 /*
