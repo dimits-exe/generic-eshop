@@ -7,9 +7,10 @@ footer {
     color: white;
 }
 
-/* Set font for header */
+/* Set font for header and cut any element that overflows its box */
 header {
     font-family: Helvetica, sans-serif;
+    overflow: hidden;
 }
 
 /* Place image on the left of the header */
@@ -18,8 +19,9 @@ header {
     padding-right: 1em;
 }
 
-#header-logo a {
-    padding-bottom: 0em;
+/* Let the image occupy 100% of its container */
+#header-logo>img {
+    width: 100%;
 }
 
 /* Place sub-title directly below title on header */
@@ -39,7 +41,7 @@ header h1 {
 /* Navbar container */
 #navbar {
     position: sticky;
-    top:1em;
+    top: 1em;
     overflow: visible;
     background-color: #00258a;
     font-family: Arial;
@@ -245,6 +247,7 @@ fieldset textarea {
 
 /* ======= FOOTER ======= */
 
+/* Display the footer elements as rows, aligned to the center of the screen */
 footer {
     display: flex;
     flex-direction: column;
@@ -328,14 +331,9 @@ footer a:hover {
 /* Phones */
 @media screen and (min-width: 100px) {
 
-    /* Keep size small and constant in phones */
-    header h1 {
-        font-size: 3rem;
-    }
-
-    /* Keep size small and constant in phones */
-    header h2 {
-        font-size: 2rem;
+    /* Occupy all of the screen width */
+    #header-logo {
+        width: 100%;
     }
 
     /* 
@@ -382,14 +380,10 @@ footer a:hover {
 /* Tablets */
 @media screen and (min-width: 820px) {
 
-    /* Keep size large and constant */
-    header h1 {
-        font-size: 4.5rem;
-    }
-
-    /* Keep size large and constant */
-    header h2 {
-        font-size: 2rem;
+    /* Occupy some of the screen width */
+    #header-logo,
+    #footer-logo {
+        width: 60%;
     }
 
     /* Display a list of categories or products in 2 columns */
@@ -423,18 +417,13 @@ footer a:hover {
     /* 
      * The about us page has only 2 elements so we override the default 3 column grid 
      */
-     #about-us-list {
+    #about-us-list {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
 
     /* Enlarge the images on the about us page */
     #about-us-list img {
-        width: 50%;
-    }
-
-    /* Occupy more of the screen width */
-    #footer-logo {
         width: 50%;
     }
 
@@ -453,14 +442,10 @@ footer a:hover {
 /* Computers */
 @media screen and (min-width: 1664px) {
 
-    /* Keep size small and constant in phones */
-    header h1 {
-        font-size: 6rem;
-    }
-
-    /* Keep size small and constant in phones */
-    header h2 {
-        font-size: 2.5rem;
+    /* Occupy some of the screen width */
+    #header-logo,
+    #footer-logo {
+        width: 50%;
     }
 
     /* Display a list of categories or products in 3 columns */
@@ -495,11 +480,6 @@ footer a:hover {
     /* Slighty downscale the images on the about us page */
     #about-us-list img {
         width: 35%;
-    }
-
-    /* Occupy some of the screen width */
-    #footer-logo {
-        width: 40%;
     }
 
     /* Set max social media icons size */
