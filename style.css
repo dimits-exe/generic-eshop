@@ -10,13 +10,12 @@ footer {
 /* Set font for header and cut any element that overflows its box */
 header {
     font-family: Helvetica, sans-serif;
-    overflow: hidden;
 }
 
-/* Place image on the left of the header */
+/* Place image on the left of the header and prevent it from overflowing its container */
 #header-logo {
     float: left;
-    padding-right: 1em;
+    overflow: hidden;
 }
 
 /* Let the image occupy 100% of its container */
