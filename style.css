@@ -186,6 +186,21 @@ dfn:hover {
     text-decoration: underline;
 }
 
+/* Format the figure vertically and to the center */
+figure {
+    display: flex;
+    flex-direction: column;
+    vertical-align: center;
+    align-items: center;
+}
+
+/* Make caption text unique */
+figcaption {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.9em;
+    font-style: italic;
+}
+
 /* Basic border configuration for the technical details table */
 table {
     table-layout: fixed;
@@ -283,7 +298,7 @@ footer>* {
 }
 
 /* Make distinct from background */
-footer>a{
+footer>a {
     color: white;
 }
 
@@ -386,10 +401,6 @@ footer>a{
     .textbox {
         margin-right: 2%;
         margin-left: 2%;
-    }
-
-    .textbox img {
-        width: 35%;
     }
 
     /* Occupy all of the screen width */
