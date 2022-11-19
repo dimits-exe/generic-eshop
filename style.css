@@ -16,6 +16,8 @@ header {
 #header-logo {
     float: left;
     overflow: hidden;
+    font-size: 0px;
+    /* Creates vertical space if not set to 0 */
 }
 
 /* Let the image occupy 100% of its container */
@@ -125,10 +127,11 @@ header h1 {
 
 /* ======= BODY GENERAL ======= */
 
-/* Set slightly larger default sex size for the document's text */
+/* Set document defaults */
 body {
     font-size: 1.15em;
     background-color: #e3e3e3;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 /* Set title size as large and remove space above header */
@@ -151,6 +154,25 @@ h2 {
 h3 {
     font-size: 1.4em;
     text-decoration: underline;
+}
+
+/* Set font for all headers */
+h1,
+h2,
+h3,
+h4 {
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Underline in case there's no link (placeholder for future html page) */
+a {
+    text-decoration: underline;
+}
+
+/* Choose a different color than blue because of background and make  */
+a:hover {
+    color: blueviolet;
+    cursor: pointer;
 }
 
 /* Mark defintions with bold and italics */
@@ -255,20 +277,14 @@ footer {
     text-align: center;
 }
 
-/* Space out horizontally footer sections and give them all the available width*/
+/* Give footer sections all the available width */
 footer>* {
-    margin-bottom: 2em;
     width: 100%;
 }
 
 /* Make distinct from background */
-footer a {
+footer>a{
     color: white;
-}
-
-/* Choose a different color than blue because of background */
-footer a:hover {
-    color: blueviolet;
 }
 
 /* Contain image inside logo container */
@@ -386,10 +402,10 @@ footer a:hover {
 /* Tablets */
 @media screen and (min-width: 820px) {
 
-    /* Occupy some of the screen width */
+    /* Occupy most of the screen width */
     #header-logo,
     #footer-logo {
-        width: 60%;
+        width: 70%;
     }
 
     /* Display a list of categories or products in 2 columns */
@@ -557,7 +573,8 @@ footer a:hover {
     padding: 1.5em;
     border-radius: 1em;
     box-shadow: 0em 0em 0.2em 0.4em rgba(0, 37, 138, 0.05);
-    overflow: auto;
+    overflow: hidden;
+    /* Crop images if they expand beyond their container */
 }
 
 /* Give a little vertical spacing between the textbox's text sections */
@@ -603,7 +620,8 @@ footer a:hover {
     padding-bottom: 1.5%;
     margin: 1em;
     box-shadow: 0em 0em 0.2em 0.2em rgba(0, 37, 138, 0.05);
-    overflow: auto;
+    overflow: hidden;
+    /* Crop images if they expand beyond their container */
 }
 
 /* 
