@@ -7,24 +7,22 @@ footer {
     color: white;
 }
 
-/* Set font for header */
+/* Set font for header and cut any element that overflows its box */
 header {
     font-family: Helvetica, sans-serif;
 }
 
-/* Place image on the left of the header */
-#logo-img {
+/* Place image on the left of the header and prevent it from overflowing its container */
+#header-logo {
     float: left;
-    padding-right: 1em;
+    overflow: hidden;
+    font-size: 0px;
+    /* Creates vertical space if not set to 0 */
 }
 
-/* Define image size */
-#logo-img img {
-    width: 10.45em;
-}
-
-#logo-img a {
-    padding-bottom: 0em;
+/* Let the image occupy 100% of its container */
+#header-logo>img {
+    width: 100%;
 }
 
 /* Place sub-title directly below title on header */
@@ -43,6 +41,8 @@ header h1 {
 
 /* Navbar container */
 #navbar {
+    position: sticky;
+    top: 1em;
     overflow: visible;
     background-color: #00258a;
     font-family: Arial;
@@ -127,11 +127,12 @@ header h1 {
 
 /* ======= BODY GENERAL ======= */
 
-/* Set text defaults */
+/* Set document defaults */
 body {
     font-size: 1.15em;
     font-family: 'Courier New', Courier, monospace;
     background-color: #e3e3e3;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 /* Set title size as large and remove space above header */
@@ -156,6 +157,25 @@ h3 {
     text-decoration: underline;
 }
 
+/* Set font for all headers */
+h1,
+h2,
+h3,
+h4 {
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Underline in case there's no link (placeholder for future html page) */
+a {
+    text-decoration: underline;
+}
+
+/* Choose a different color than blue because of background and make  */
+a:hover {
+    color: blueviolet;
+    cursor: pointer;
+}
+
 /* Mark defintions with bold and italics */
 dfn {
     font-weight: bold;
@@ -165,6 +185,20 @@ dfn {
 dfn:hover {
     color: darkcyan;
     text-decoration: underline;
+}
+
+/* Format the figure vertically and to the center */
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Make caption text unique */
+figcaption {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.9em;
+    font-style: italic;
 }
 
 /* Basic border configuration for the technical details table */
@@ -339,37 +373,56 @@ fieldset>.option * {
 
 /* ======= FOOTER ======= */
 
-/* Space out footer elements*/
+/* Display the footer elements as rows, aligned to the center of the screen */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Give footer sections all the available width and space out footer elements */
 footer>* {
+    width: 100%;
     margin-bottom: 0.5em;
 }
 
-/* Set footer image size and place it in the centre */
-#footer-logo-img {
-    display: block;
-    width: 40%;
-    margin-left: auto;
-    margin-right: auto;
+/* Make distinct from background */
+footer>a {
+    color: white;
 }
 
-/* Create vertical space between contact details and image */
-#footer-details {
-    margin-top: 2em;
+/* Contain image inside logo container */
+#footer-logo>img {
+    width: 100%;
 }
 
-/* 
- * Horizontally center all the footer details, 
- * where each div is an individual detail.
- */
-#footer-details>div {
-    text-align: center;
+/* Spread out the address containers */
+#footer-address>span {
+    display: flex;
+    justify-content: space-between;
+    text-align: start;
+}
+
+/* Give some horizontal space between the image and the value for each container */
+#footer-address>span>* {
+    margin-right: 5%;
 }
 
 /* Set size for address icons */
 #footer-address img {
-    height: 2em;
     display: flex;
     align-items: center;
+}
+
+/* Create a column with the details at the bottom of the footer */
+#footer-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
 }
 
 /* Keep the icons used for the addresses small */
@@ -390,15 +443,19 @@ footer>* {
 
 /* Set max social media icons size */
 .social-media-bar img {
-    max-width: 2em;
-    max-height: 2em;
-    margin: 0px;
+    max-width: 7em;
+    max-height: 7em;
 }
 
 /* ======= MEDIA QUERIES ======= */
 
 /* Phones */
-@media screen and (min-width: 360px) {
+@media screen and (min-width: 100px) {
+
+    /* Occupy all of the screen width */
+    #header-logo {
+        width: 100%;
+    }
 
     /* 
      * Display a list of categories or products in a single column.
@@ -418,15 +475,40 @@ footer>* {
         width: 95%;
     }
 
+    /* Slightly zoom in on the pictures when hovered */
+    .textbox img:hover,
+    .category img:hover {
+        transform: scale(1.1);
+        z-index: 1;
+    }
+
+    /* Set small social media and address icons size */
+    #footer-address img,
+    .social-media-bar img {
+        height: 3em;
+    }
+
     /* Leave minimal side margins to conserve space */
     .textbox {
         margin-right: 2%;
         margin-left: 2%;
     }
+
+    /* Occupy all of the screen width */
+    #footer-logo {
+        width: 100%;
+    }
+
 }
 
 /* Tablets */
 @media screen and (min-width: 820px) {
+
+    /* Occupy most of the screen width */
+    #header-logo,
+    #footer-logo {
+        width: 70%;
+    }
 
     /* Display a list of categories or products in 2 columns */
     .category-list {
@@ -449,10 +531,53 @@ footer>* {
         margin-right: 5%;
         margin-left: 5%;
     }
+
+    /* Slightly zoom in on the pictures when hovered */
+    .textbox img:hover,
+    .category img:hover {
+        transform: scale(1.1);
+        z-index: 1;
+    }
+
+    /* Set max social media icons size */
+    .social-media-bar img {
+        width: 5%;
+        height: 5%;
+    }
+
+    /* 
+     * The about us page has only 2 elements so we override the default 3 column grid 
+     */
+    #about-us-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Enlarge the images on the about us page */
+    #about-us-list img {
+        width: 50%;
+    }
+
+    /* Give vertical space to the address bar */
+    #footer-address {
+        height: 10em;
+    }
+
+    /* Set constant size for address icons */
+    #footer-address img {
+        height: 3em;
+    }
+
 }
 
 /* Computers */
 @media screen and (min-width: 1664px) {
+
+    /* Occupy some of the screen width */
+    #header-logo,
+    #footer-logo {
+        width: 50%;
+    }
 
     /* Display a list of categories or products in 3 columns */
     .category-list {
@@ -460,10 +585,33 @@ footer>* {
         grid-template-columns: 1fr 1fr 1fr;
     }
 
+    /* 
+     * The about us page has only 2 elements so we override the default 3 column grid 
+     */
+    #about-us-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
     /* Cover container width, leaving some space for zooming */
-    .textbox img,
     .category img {
         width: 90%;
+        margin: 1rem;
+    }
+
+    /* 
+     * Images used by categories and textboxes that don't belong in a list 
+     * need to be much smaller because of the sheer size of their containers. 
+     */
+    .textbox img,
+    .category.single img {
+        width: 30%;
+        float: left;
+    }
+
+    /* Add margin above footer adress/telephone/email images */
+    #footer-address>span>* {
+        margin-top: 8%;
     }
 
     /* 
@@ -473,6 +621,45 @@ footer>* {
     .textbox {
         margin-right: 15%;
         margin-left: 15%;
+    }
+
+    /* Decrease zoom because of the larger size used for images here */
+    .textbox img:hover,
+    .category img:hover {
+        transform: scale(1.03);
+        z-index: 1;
+    }
+
+    /* Slighty downscale the images on the about us page */
+    #about-us-list img {
+        width: 35%;
+    }
+
+    /* Set max social media icons size */
+    .social-media-bar img {
+        width: 5%;
+        height: 5%;
+    }
+
+    /* Give vertical space to the address bar */
+    #footer-address {
+        height: 10em;
+    }
+
+    /* Give most of the horizontal space to the address containers */
+    #footer-address>span {
+        height: 90%;
+    }
+
+    /* Slightly increase font size for larger screens */
+    footer p,
+    footer a {
+        font-size: 1.3em;
+    }
+
+    /* Set size for address icons */
+    #footer-address img {
+        height: 50%;
     }
 
     #sign-up {
@@ -499,7 +686,8 @@ footer>* {
     padding: 1.5em;
     border-radius: 1em;
     box-shadow: 0em 0em 0.2em 0.4em rgba(0, 37, 138, 0.05);
-    overflow: auto;
+    overflow: hidden;
+    /* Crop images if they expand beyond their container */
 }
 
 /* Give a little vertical spacing between the textbox's text sections */
@@ -516,17 +704,10 @@ footer>* {
 .category img {
     float: left;
     /* Give space for when the picture zooms */
-    margin-right: 10%;
-    margin-bottom: 10%;
-
+    margin-right: 3.7%;
+    margin-left: 4%;
+    margin-bottom: 3.5%;
     transition: transform .2s;
-}
-
-/* Slightly zoom in on the pictures when hovered */
-.textbox img:hover,
-.category img:hover {
-    transform: scale(1.1);
-    z-index: 1;
 }
 
 /*
@@ -552,7 +733,8 @@ footer>* {
     padding-bottom: 1.5%;
     margin: 1em;
     box-shadow: 0em 0em 0.2em 0.2em rgba(0, 37, 138, 0.05);
-    overflow: auto;
+    overflow: hidden;
+    /* Crop images if they expand beyond their container */
 }
 
 /* 
