@@ -517,6 +517,11 @@ footer>a {
         float: left;
     }
 
+    /* Add margin above footer adress/telephone/email images */
+    #footer-address>span>* {
+        margin-top: 8%;
+    }
+
     /* 
      * Leave extensive margins so the user's focus is
      * kept to the middle of the screen.
