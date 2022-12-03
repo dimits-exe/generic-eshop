@@ -278,15 +278,15 @@ fieldset>legend {
 /* Make text area visually distinct */
 fieldset>textarea {
     width: 100%;
-    height: 150px;
-    padding: 12px 20px;
+    height: 7rem;
+    padding: 2px 4px;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
     background-color: #f8f8f8;
-    font-size: 16px;
+    font-size: 1.2rem;
     resize: none;
-    text-align: center;
+    text-align: left;
 }
 
 /* Increase the width of the input fields*/
@@ -340,7 +340,7 @@ fieldset>.option * {
 #questionnaire>h3 {
     text-decoration: none;
     font-size: 1.5rem;
-    margin-top: 4em;
+    margin-top: 2em;
 }
 
 /* Center the text inputs in the questionaire instead of placing them on the left */

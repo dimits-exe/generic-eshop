@@ -125,130 +125,132 @@
                 <p>
                     Create a free private or corporate account.
                 </p>
-                <fieldset>
+                <article id="sign-up">
+                    <fieldset>
 
-                    <legend>
-                        Personal Information
-                    </legend>
-
-                    <label for="signup-full-name">
-                        Full Name:
-                    </label>
-                    <input type="text" id="signup-full-name" name="signup-full-name" placeholder="John Smith"
-                        title="Full Name" minlength="4" autocomplete="name" required />
-
-                    <label for="signup-email">
-                        Email:
-                    </label>
-                    <!--Email inputs automatically check for correct regex-->
-                    <input type="email" id="signup-email" name="signup-email" placeholder="example@gmail.com"
-                        title="Personal Email" autocomplete="email" required />
-
-                    <label for="signup-telephone">
-                        Personal Number:
-                    </label>
-                    <!-- Matches the following types:
-                        123-456-7890
-                        (123) 456-7890
-                        123 456 7890
-                        123.456.7890
-                        +91 (123) 456-7890
-                        Yes I stole this from SO
-                    -->
-                    <input type="tel" id="signup-telephone" name="signup-birthdate" placeholder="+30694523945"
-                        title="Personal Telephone" pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$"
-                        autocomplete="tel" required />
-
-                    <label for="signup-birthdate">
-                        Date of Birth:
-                    </label>
-                    <input type="date" id="signup-birthdate" name="signup-birthdate" min="1900-01-01"
-                        placeholder="2022-11-03" title="Birthdate" autocomplete="bday" required />
-
-                    <label for="org-name">Organization Name (Leave blank if not representing an organization):</label>
-                    <input type="text" id="org-name" name="org-name" title="Organization Name"
-                        autocomplete="organization" placeholder="McJordan Shipping LTE">
-
-                    <label for="org-email">Organization Email (Leave blank if not representing an organization):</label>
-                    <input type="text" id="org-email" name="org-email" title="Organization Name" autocomplete="on"
-                        placeholder="example@gmail.com">
-                </fieldset>
-
-                <fieldset>
-                    <legend>
-                        Account Information
-                    </legend>
-
-                    <label for="signup-username">Username (at least 8 characters long):</label>
-                    <input type="text" id="signup-username" name="signup-username" pattern="^[a-zA-Z0-9._-]{8,}$"
-                        placeholder="aNormalUsername"
-                        title="Any letter from a-z, can use underscores, points and dashes, at least 8 characters long"
-                        autocomplete="username" required>
-
-                    <label for="signup-password">Password:</label>
-                    <input type="password" id="signup-password" name="signup-password"
-                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
-                        autocomplete="new-password" required>
-
-                    <label for="signup-password-2nd">Confirm password:</label>
-                    <input type="password" id="signup-password-2nd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
-                        required>
-                </fieldset>
-
-                <fieldset>
-                    <legend>
-                        Paymetrics
-                    </legend>
-                    <label for="payment-methods"> Payment Method:</label>
-                    <select id="payment-methods" name="payment-methods">
-                        <option value="Cash"> Pay With Cash </option>
-                        <option value="PayPal"> PayPal </option>
-                        <option value="National Bank of Greece"> National Bank Of Greece </option>
-                        <option value="Master Card"> Master Card </option>
-                    </select>
-
-                    <label for="payment-details"> Payment Details:</label>
-                    <!--This is a fake IBAN-->
-                    <input type="text" id="payment-details" name="payment-details"
-                        placeholder="UA674343395323521253293756269 12-06 139">
-                    <details>
-                        <summary>Help⬇</summary>
-                        <p>
-                            Your PayPal ID or your card's info including code, expiry date and safety number.
-                            Leave blank if cash.
-                            </small>
-                    </details>
-                    <label for="signup-address"> Address: </label>
-                    <input type="text" id="signup-address" placeholder="31st Rue de Jardin 15567 Paris"
-                        name="signup-address" autocomplete="street-address" required>
-                </fieldset>
-
-                <fieldset>
-                    <legend>
-                        Corporate Spam
-                    </legend>
-
-                    <label for="spam-methods">Please select how you want Faymetrics updates to be delivered to
-                        you</label>
-                    <select id="spam-methods" name="spam-methods">
-                        <option value="sms"> SMS </option>
-                        <option value="email"> Email </option>
-                        <option value="viber"> Viber </option>
-                        <option value="whats-app"> WhatsApp </option>
-                        <option value="tik-tok">TikTok</option>
-                    </select>
-
-                    <div class="option">
-                        <input type="checkbox" id="spam-option" name="spam-option" checked>
-                        <label for="spam-option">
-                            <small>
-                                I would like to receive occassional updates from Faymetrics
-                            </small>
+                        <legend>
+                            Personal Information
+                        </legend>
+    
+                        <label for="signup-full-name">
+                            Full Name:
                         </label>
-                    </div>
-                </fieldset>
+                        <input type="text" id="signup-full-name" name="signup-full-name" placeholder="John Smith"
+                            title="Full Name" minlength="4" autocomplete="name" required />
+    
+                        <label for="signup-email">
+                            Email:
+                        </label>
+                        <!--Email inputs automatically check for correct regex-->
+                        <input type="email" id="signup-email" name="signup-email" placeholder="example@gmail.com"
+                            title="Personal Email" autocomplete="email" required />
+    
+                        <label for="signup-telephone">
+                            Personal Number:
+                        </label>
+                        <!-- Matches the following types:
+                            123-456-7890
+                            (123) 456-7890
+                            123 456 7890
+                            123.456.7890
+                            +91 (123) 456-7890
+                            Yes I stole this from SO
+                        -->
+                        <input type="tel" id="signup-telephone" name="signup-birthdate" placeholder="+30694523945"
+                            title="Personal Telephone" pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$"
+                            autocomplete="tel" required />
+    
+                        <label for="signup-birthdate">
+                            Date of Birth:
+                        </label>
+                        <input type="date" id="signup-birthdate" name="signup-birthdate" min="1900-01-01"
+                            placeholder="2022-11-03" title="Birthdate" autocomplete="bday" required />
+    
+                        <label for="org-name">Organization Name (Leave blank if not representing an organization):</label>
+                        <input type="text" id="org-name" name="org-name" title="Organization Name"
+                            autocomplete="organization" placeholder="McJordan Shipping LTE">
+    
+                        <label for="org-email">Organization Email (Leave blank if not representing an organization):</label>
+                        <input type="text" id="org-email" name="org-email" title="Organization Name" autocomplete="on"
+                            placeholder="example@gmail.com">
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>
+                            Account Information
+                        </legend>
+    
+                        <label for="signup-username">Username (at least 8 characters long):</label>
+                        <input type="text" id="signup-username" name="signup-username" pattern="^[a-zA-Z0-9._-]{8,}$"
+                            placeholder="aNormalUsername"
+                            title="Any letter from a-z, can use underscores, points and dashes, at least 8 characters long"
+                            autocomplete="username" required>
+    
+                        <label for="signup-password">Password:</label>
+                        <input type="password" id="signup-password" name="signup-password"
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                            autocomplete="new-password" required>
+    
+                        <label for="signup-password-2nd">Confirm password:</label>
+                        <input type="password" id="signup-password-2nd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                            required>
+                    </fieldset>
+    
+                    <fieldset>
+                        <legend>
+                            Payment
+                        </legend>
+                        <label for="payment-methods"> Payment Method:</label>
+                        <select id="payment-methods" name="payment-methods">
+                            <option value="Cash"> Pay With Cash </option>
+                            <option value="PayPal"> PayPal </option>
+                            <option value="National Bank of Greece"> National Bank Of Greece </option>
+                            <option value="Master Card"> Master Card </option>
+                        </select>
+    
+                        <label for="payment-details"> Payment Details:</label>
+                        <!--This is a fake IBAN-->
+                        <input type="text" id="payment-details" name="payment-details"
+                            placeholder="UA674343395323521253293756269 12-06 139">
+                        <details>
+                            <summary>Help⬇</summary>
+                            <p>
+                                Your PayPal ID or your card's info including code, expiry date and safety number.
+                                Leave blank if cash.
+                            </p>
+                        </details>
+                        <label for="signup-address"> Address: </label>
+                        <input type="text" id="signup-address" placeholder="31st Rue de Jardin 15567 Paris"
+                            name="signup-address" autocomplete="street-address" required>
+                    </fieldset>
+    
+                    <fieldset>
+                        <legend>
+                            Corporate Spam
+                        </legend>
+    
+                        <label for="spam-methods">Please select how you want Faymetrics updates to be delivered to
+                            you</label>
+                        <select id="spam-methods" name="spam-methods">
+                            <option value="sms"> SMS </option>
+                            <option value="email"> Email </option>
+                            <option value="viber"> Viber </option>
+                            <option value="whats-app"> WhatsApp </option>
+                            <option value="tik-tok">TikTok</option>
+                        </select>
+    
+                        <div class="option">
+                            <input type="checkbox" id="spam-option" name="spam-option" checked>
+                            <label for="spam-option">
+                                <small>
+                                    I would like to receive occassional updates from Faymetrics
+                                </small>
+                            </label>
+                        </div>
+                    </fieldset>
+                </article>
 
                 <fieldset id="questionnaire">
                     <legend>
@@ -290,7 +292,7 @@
 
                     <h3>How would you rate our customer support?</h3>
                     <section class="satisfaction-rating">
-                        
+
                         <input type="radio" name="question-customer-satisfaction" id="customer-5" value="5" />
                         <label for="customer-5">
                             <img src="resources/five.png" alt="5" title="Good">
