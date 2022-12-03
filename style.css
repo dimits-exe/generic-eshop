@@ -190,7 +190,6 @@ dfn:hover {
 figure {
     display: flex;
     flex-direction: column;
-    vertical-align: center;
     align-items: center;
 }
 
@@ -514,7 +513,8 @@ footer>a {
      */
     .textbox img,
     .category.single img {
-        width: 40%;
+        width: 30%;
+        float: left;
     }
 
     /* 
