@@ -10,6 +10,7 @@
     <meta content="Dimitris Tsirmpas" name="author" />
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
     <link href="style.css" rel="stylesheet" />
+    <script src="validation.js" defer></script>
 </head>
 <!--
                                 .-----.
@@ -149,8 +150,8 @@
                     <label for="signup-birthdate">
                         Date of Birth:
                     </label>
-                    <input type="date" id="signup-birthdate" name="signup-birthdate" min="1900-1-1" max="2030-1-1"
-                        placeholder="2022-11-3" title="Birthdate" autocomplete="bday" required />
+                    <input type="date" id="signup-birthdate" name="signup-birthdate" min="1900-01-01"
+                        placeholder="2022-11-03" title="Birthdate" autocomplete="bday" required />
 
                     <label for="org-name">Organization Name (Leave blank if not representing an organization):</label>
                     <input type="text" id="org-name" name="org-name" title="Organization Name"
@@ -192,9 +193,8 @@
                     <select id="payment-methods" name="payment-methods">
                         <option value="Cash"> Pay With Cash </option>
                         <option value="PayPal"> PayPal </option>
-                        <option value="National Bank of Greece">National Bank Of Greece</option>
-                        <option value="Master Bank">Master Card</option>
-                        <option value="Tik Tok">TikTok</option>
+                        <option value="National Bank of Greece"> National Bank Of Greece </option>
+                        <option value="Master Card"> Master Card </option>
                     </select>
 
                     <label for="payment-details"> Payment Details:</label>
@@ -224,7 +224,8 @@
                         <option value="sms"> SMS </option>
                         <option value="email"> Email </option>
                         <option value="viber"> Viber </option>
-                        <option value="whatsapp"> WhatsApp </option>
+                        <option value="whats-app"> WhatsApp </option>
+                        <option value="tik-tok">TikTok</option>
                     </select>
 
                     <div class="option">
@@ -360,7 +361,7 @@
                 </datalist>
 
                 <div class="option">
-                    <input type="checkbox" id="spam-option" name="spam-option" required>
+                    <input type="checkbox" id="spam-option1" name="spam-option" required>
                     <label for="spam-option">
                         <small>
                             I understand and agree with the Faymetrics® Terms of Service (ToS).
@@ -369,7 +370,7 @@
                 </div>
 
                 <div class="option">
-                    <input type="checkbox" id="spam-option" name="spam-option" required>
+                    <input type="checkbox" id="spam-option2" name="spam-option" required>
                     <label for="spam-option">
                         <small>
                             I consent with the Faymetrics® cookie and personal data policy.
@@ -378,7 +379,7 @@
                 </div>
 
                 <section id="button-group">
-                    <button type="submit">
+                    <button id="sign-up-button" type="submit">
                         Sign Up
                     </button>
                 </section>
