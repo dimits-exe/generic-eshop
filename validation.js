@@ -45,13 +45,16 @@ function checkPayment() {
  * Checks if the birthdate isn't after the current date or the signee is under 18 yo.
  */
 function checkBirthDate() {
-    let birthdate = birthdateField.value;
+    let birthdate = new Date(birthdateField.value);
     let todaysDate = new Date();
     let errorMsg = "";
 
+    console.log("sex");
     if(birthdate >= todaysDate) {
+        console.log("sex3");
         errorMsg = "Please enter a valid date";
     } else if (calculateAge(birthdate) < 18) {
+        console.log("sex2");
         errorMsg = "You have to be 18+ to register"
     }
 

@@ -148,8 +148,22 @@
                             Yes I stole this from SO
                         -->
                         <input autocomplete="tel" id="signup-telephone" name="signup-birthdate"
-                            pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$" placeholder="+30694523945"
+                            pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$" placeholder="123.456.7890"
                             required="" title="Personal Telephone" type="tel" />
+                        <details>
+                            <summary>
+                                Help⬇
+                            </summary>
+                            <p>
+                                Matches the following:<br>
+                                123-456-7890<br>
+                                (123) 456-7890<br>
+                                123 456 7890<br>
+                                123.456.7890<br>
+                                +91 (123) 456-7890
+                            </p>
+                        </details>
+
                         <label for="signup-birthdate">
                             Date of Birth:
                         </label>
