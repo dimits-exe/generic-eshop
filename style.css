@@ -130,6 +130,7 @@ header h1 {
 /* Set document defaults */
 body {
     font-size: 1.15em;
+    font-family: 'Courier New', Courier, monospace;
     background-color: #e3e3e3;
     font-family: 'Courier New', Courier, monospace;
 }
@@ -213,10 +214,21 @@ tr:nth-child(even) {
     background-color: lightgray;
 }
 
+/* Display address elements in a row */
 address {
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+/* Mark valid input as green */
+input:valid {
+    border-color: green;
+}
+
+/* Mark invalid input as red */
+input:invalid {
+    border-color: red;
 }
 
 /* ======= FORMS ======= */
@@ -226,37 +238,121 @@ fieldset {
     background-color: lightgray;
     border-style: solid;
     border-color: #00258a;
-    margin-bottom: 2em;
+    padding: 3%;
+    border-radius: 1.5em;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Place fieldset elements vertically */
-fieldset * {
+/* Vertically center fieldset children */
+fieldset>* {
     display: block;
+    text-align: left;
+    align-self: center;
+}
+
+/* Keep all stand-alone text and summary-details in the center when expanded */
+fieldset summary,
+fieldset details,
+fieldset>p {
+    text-align: center;
+}
+
+/* Slightly shrink explanation text */
+fieldset>details>p{
+    font-size: 0.9rem;
+}
+
+/* Center fieldset headers */
+fieldset>h3 {
+    text-align: center;
 }
 
 /* Give vertical space between fieldsets */
-fieldset label {
-    text-align: left;
-    margin-top: 1em;
+fieldset>label {
+    margin-top: 1.5em;
 }
 
 /* Enlarge fieldset title */
-fieldset legend {
+fieldset>legend {
     font-size: 150%;
     font-weight: 400;
 }
 
 /* Make text area visually distinct */
-fieldset textarea {
+fieldset>textarea {
     width: 100%;
-    height: 150px;
-    padding: 12px 20px;
+    height: 7rem;
+    padding: 2px 4px;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
     background-color: #f8f8f8;
-    font-size: 16px;
+    font-size: 1.2rem;
     resize: none;
+    text-align: left;
+}
+
+/* Increase the width of the input fields*/
+fieldset>input {
+    width: 50%;
+}
+
+/* Display the rating images horizontally */
+.satisfaction-rating {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* 
+* We will use radio buttons disguised as radio buttons.
+* Hide radio buttons adjacent to our images.
+*/
+.satisfaction-rating input[type=radio] {
+    display: none;
+}
+
+/* Show that images are in fact radio buttons when hovered upon */
+.satisfaction-rating img:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+/* Change the appearance of the selected image to be darker and larger */
+.satisfaction-rating input[type=radio]:checked+label>img {
+    opacity: 1;
+    filter: brightness(80%);
+    height: 10em;
+}
+
+/* Fit the images inside the buttons */
+.textbox .satisfaction-rating img {
+    vertical-align: middle;
+    width: 90%;
+    height: 8em;
+    aspect-ratio: 1;
+}
+
+/* Display the checkboxes/radioboxes inline with their legends */
+fieldset>.option * {
+    display: inline;
+    vertical-align: center;
+}
+
+/* Simplify questionnaire headers */
+#questionnaire>h3 {
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-top: 2em;
+}
+
+/* Center the text inputs in the questionaire instead of placing them on the left */
+#questionnaire>input[type="text"] {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Center buttions below the textarea */
@@ -268,7 +364,7 @@ fieldset textarea {
 }
 
 /* Customize button appearance */
-#button-group button {
+#button-group>button {
     font-size: 200%;
     border-radius: 1em;
     border-color: #00258a;
@@ -291,9 +387,10 @@ footer {
     text-align: center;
 }
 
-/* Give footer sections all the available width */
+/* Give footer sections all the available width and space out footer elements */
 footer>* {
     width: 100%;
+    margin-bottom: 0.5em;
 }
 
 /* Make distinct from background */
@@ -570,6 +667,11 @@ footer>a {
         height: 50%;
     }
 
+    #sign-up {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1%;
+    }
 }
 
 /* ======= USER DEFINED BOXES ======= */
@@ -594,7 +696,7 @@ footer>a {
 }
 
 /* Give a little vertical spacing between the textbox's text sections */
-.textbox h3 {
+.textbox>h3 {
     margin-top: 2em;
 }
 
