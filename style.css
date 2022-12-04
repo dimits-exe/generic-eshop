@@ -259,6 +259,11 @@ fieldset>p {
     text-align: center;
 }
 
+/* Slightly shrink explanation text */
+fieldset>details>p{
+    font-size: 0.9rem;
+}
+
 /* Center fieldset headers */
 fieldset>h3 {
     text-align: center;

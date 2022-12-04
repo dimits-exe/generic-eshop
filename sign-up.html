@@ -139,14 +139,6 @@
                         <label for="signup-telephone">
                             Personal Number:
                         </label>
-                        <!-- Matches the following types:
-                            123-456-7890
-                            (123) 456-7890
-                            123 456 7890
-                            123.456.7890
-                            +91 (123) 456-7890
-                            Yes I stole this from SO
-                        -->
                         <input autocomplete="tel" id="signup-telephone" name="signup-birthdate"
                             pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$" placeholder="123.456.7890"
                             required="" title="Personal Telephone" type="tel" />
@@ -353,6 +345,14 @@
                     </h3>
                     <input id="question-fav-product" list="product-list" name="question-fav-product"
                         placeholder="#EFFVG34" title="Product code" type="text" />
+                        <details>
+                            <summary>
+                                Help⬇
+                            </summary>
+                            <p>
+                                You can use either the product's name or its code.
+                            </p>
+                        </details>
                     <h3 for="question-why-product">
                         In which ways has the product aided your organization?
                     </h3>
@@ -400,6 +400,20 @@
                     <option value="#UCVMR127">
                     </option>
                     <option value="#PTUR127">
+                    </option>
+                    <option value="Fluorescence LIDAR System ">
+                    </option>
+                    <option value="Vessel Monitoring System - VMS">
+                    </option>
+                    <option value="LIDAR Marine Object Detection and Tracking (MDT)">
+                    </option>
+                    <option value="MAX-DOAS Instrument for Measuring Atmospheric Pollution">
+                    </option>
+                    <option value="DHMZ weather warnings">
+                    </option>
+                    <option value="FeWIS – Weather information system for civil protection">
+                    </option>
+                    <option value="Flood forecasting and warning service ">
                     </option>
                 </datalist>
                 <datalist id="category-list">
