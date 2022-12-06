@@ -700,6 +700,36 @@ footer>a {
     margin-top: 2em;
 }
 
+/* Content */
+.textbox.review>p {
+    text-align: left;
+}
+
+/* Format usernames */
+.textbox.review>h4 {
+    margin: 0.5em;
+    font-size: 1.5em;
+    color:#00258a;
+    text-align: left;
+}
+
+/* Keep profile pic constant*/
+.textbox.review>img {
+    height: 5em;
+    width: 5em;
+}
+
+/* Enlarge rating score */
+.textbox.review>h5 {
+    margin: 0.7em;
+    font-size: 2em;
+}
+
+/* Give score a unique color */
+.textbox.review>h5>var {
+    color:#00258a;
+}
+
 /*
  * The standard images acompanying text and category boxes.
  * We don't want to explicitly set both width and height because
